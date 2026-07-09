@@ -10,14 +10,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w128">
+<link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w128">
 <style>
 :root{
-  /* ==== Manual de marca GP3 Sports · rojo / negro / blanco ==== */
-  --red:#EB0000; --celeste:#EB0000; --blue:#8f0000; --blue-deep:#2a0709; --sky:#ff6a6a;
-  --white:#fff; --bg:#08080a; --surface:#111013; --surface2:#191418; --line:#2c2126;
-  --muted:#b7abae; --gold:#facc15; --green:#22c55e;
-  --grad:linear-gradient(120deg,#ff2d2d,#b00000);
-  --grad-dark:linear-gradient(160deg,#22060a 0%,#3a0a0f 45%,#08080a 100%);
+  /* ==== Manual de marca CAV · celeste / blanco (bandera Argentina) ==== */
+  --celeste:#6CACE4; --blue:#14499B; --blue-deep:#0a2547; --sky:#8fc4f2;
+  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#111b2e; --line:#1d2c44;
+  --muted:#9fb4d0; --gold:#facc15; --green:#22c55e;
+  --grad:linear-gradient(120deg,var(--celeste),var(--blue));
+  --grad-dark:linear-gradient(160deg,#0a2547 0%,#0d356b 45%,#05070d 100%);
   --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
   --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
@@ -29,11 +31,10 @@ a{color:inherit;text-decoration:none}
 section{scroll-margin-top:90px}
 
 /* ===== LOGO (texto) ===== */
-.gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
-.gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg)}
-.gp3logo .gp3 .g{color:#fff}
-.gp3logo .gp3 .r{color:var(--red)}
-.gp3logo .cav{font-size:13px;letter-spacing:.24em;color:var(--red);border-left:2px solid var(--red);padding-left:7px}
+.gp3logo{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);line-height:.9}
+.gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gp3logo .cav{font-size:13px;letter-spacing:.24em;color:var(--celeste);border-left:2px solid var(--celeste);padding-left:7px}
 
 /* ===== NAV ===== */
 nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.82);position:sticky;top:0;z-index:40;
@@ -59,18 +60,18 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 /* ===== HERO ===== */
 .hero{background:var(--grad-dark);text-align:center;padding:64px 0 54px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:
-  repeating-linear-gradient(90deg,transparent 0 38px,rgba(235,0,0,.05) 38px 40px);pointer-events:none}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(235,0,0,.28),transparent 70%)}
+  repeating-linear-gradient(90deg,transparent 0 38px,rgba(108,172,228,.05) 38px 40px);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(108,172,228,.28),transparent 70%)}
 .hero .wrap{position:relative;z-index:1}
 .hero .k{font-family:var(--disp);letter-spacing:.28em;font-size:14px;color:var(--celeste)}
 .hero h1{font-family:var(--disp);font-size:clamp(40px,9vw,86px);line-height:.92;margin:10px 0 6px;letter-spacing:.01em}
 .hero h1 .b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .sub{color:#f3e3e3;font-size:clamp(15px,2.2vw,19px);font-style:italic;font-weight:700;max-width:640px;margin:6px auto 0}
+.hero .sub{color:#d7e6fa;font-size:clamp(15px,2.2vw,19px);font-style:italic;font-weight:700;max-width:640px;margin:6px auto 0}
 .hero .facts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
 .hero .fact{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
   font-family:var(--disp);letter-spacing:.08em;font-size:14px;color:#fff}
 .hero .fact b{color:var(--celeste)}
-.next{margin-top:26px;display:inline-flex;flex-direction:column;gap:2px;background:rgba(45,9,12,.6);
+.next{margin-top:26px;display:inline-flex;flex-direction:column;gap:2px;background:rgba(10,37,71,.6);
   border:1px solid var(--celeste);border-radius:16px;padding:14px 26px}
 .next .nk{font-family:var(--disp);letter-spacing:.2em;font-size:12px;color:var(--celeste)}
 .next .nv{font-family:var(--disp);font-size:26px}
@@ -104,7 +105,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
 .tab{font-family:var(--disp);letter-spacing:.06em;font-size:14px;color:var(--muted);background:var(--surface2);
   border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s;white-space:nowrap}
-.tab:hover{color:#fff;border-color:var(--red)}
+.tab:hover{color:#fff;border-color:var(--celeste)}
 .tab.active{background:var(--grad);color:#fff;border-color:transparent}
 @media(max-width:640px){
   .tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:8px;
@@ -136,20 +137,30 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .rk{max-width:760px;margin:0 auto}
 .rktable{width:100%;border-collapse:collapse;background:var(--surface2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .rktable th{font-family:var(--disp);letter-spacing:.08em;font-size:13px;color:var(--celeste);text-align:left;
-  padding:12px 14px;background:rgba(45,9,12,.5)}
+  padding:12px 14px;background:rgba(10,37,71,.5)}
 .rktable td{padding:11px 14px;border-top:1px solid var(--line);font-size:15px}
 .rktable td.p{font-family:var(--disp);width:44px;color:var(--muted)}
 .rktable td.n{width:52px;color:var(--celeste);font-weight:700}
 .rktable td.pt{width:70px;text-align:right;font-family:var(--disp);font-size:17px}
-.rktable tr:first-child td{background:rgba(235,0,0,.08)}
+.rktable tr:first-child td{background:rgba(108,172,228,.08)}
 .rktable tr:first-child td.p{color:var(--gold)}
+.rktable td.av{width:46px;padding:6px 0 6px 12px}
+.rkav{display:inline-flex;width:34px;height:34px;border-radius:50%;overflow:hidden;background:var(--grad-dark);
+  border:1.5px solid var(--celeste);align-items:center;justify-content:center;vertical-align:middle}
+.rkav img{width:100%;height:100%;object-fit:cover}
+.rkav .rknum{font-family:var(--disp);font-size:14px;color:var(--celeste)}
+
+/* ===== VISTAS (páginas) ===== */
+.view{display:none}
+.view.show{display:block}
+.brandlogo{height:42px;width:auto;display:block}
 
 /* ===== NOTICIAS ===== */
 .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .newsc{background:var(--surface2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
 .newsc .ph{height:150px;background:var(--grad-dark);display:flex;align-items:center;justify-content:center;
   font-family:var(--disp);letter-spacing:.14em;color:var(--celeste);font-size:16px;position:relative}
-.newsc .ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 30px,rgba(235,0,0,.06) 30px 32px)}
+.newsc .ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 30px,rgba(108,172,228,.06) 30px 32px)}
 .newsc .body{padding:16px}
 .newsc .tag{font-family:var(--disp);letter-spacing:.12em;font-size:11px;color:var(--celeste)}
 .newsc h3{font-size:17px;margin:6px 0 6px;line-height:1.25}
@@ -163,7 +174,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .sprow a:hover{opacity:1;filter:none;transform:translateY(-2px)}
 .sprow img{max-height:52px;max-width:170px;width:auto;height:auto;object-fit:contain;display:block}
 .sptext{font-family:var(--disp);letter-spacing:.14em;font-size:30px;color:#fff;line-height:1}
-.sptext b{color:var(--red)}
+.sptext b{color:var(--celeste)}
 
 /* ===== FOOTER ===== */
 footer{border-top:1px solid var(--line);padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
@@ -177,7 +188,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 <body>
 
 <nav><div class="wrap">
-  <a href="#inicio" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CAV</span></a>
+  <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w400" alt="GP3 · CAV"></a>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="#inicio">Inicio</a>
@@ -192,7 +203,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></nav>
 
 <!-- ===== INICIO ===== -->
-<header class="hero" id="inicio"><div class="wrap">
+<header class="hero view show" id="inicio"><div class="wrap">
   <div class="k">GP3 Argentina</div>
   <h1>Campeonato<br><span class="b">Argentino</span> de Velocidad</h1>
   <p class="sub">¿Estás listo para vivir la velocidad al límite?</p>
@@ -210,7 +221,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></header>
 
 <!-- ===== CALENDARIO ===== -->
-<section class="sec" id="calendario"><div class="wrap">
+<section class="sec view" id="calendario"><div class="wrap">
   <div class="sechead">
     <div class="k">Temporada 2026</div>
     <h2>Calendario</h2>
@@ -220,7 +231,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== PILOTOS ===== -->
-<section class="sec alt" id="pilotos"><div class="wrap">
+<section class="sec alt view" id="pilotos"><div class="wrap">
   <div class="sechead">
     <div class="k">Grilla 2026</div>
     <h2>Pilotos por Categoría</h2>
@@ -231,7 +242,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== RANKING ===== -->
-<section class="sec" id="ranking"><div class="wrap">
+<section class="sec view" id="ranking"><div class="wrap">
   <div class="sechead">
     <div class="k">Actualizado · San Nicolás (Fecha 3)</div>
     <h2>Ranking 2026</h2>
@@ -242,7 +253,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== NOTICIAS ===== -->
-<section class="sec alt" id="noticias"><div class="wrap">
+<section class="sec alt view" id="noticias"><div class="wrap">
   <div class="sechead">
     <div class="k">Lo último</div>
     <h2>Noticias</h2>
@@ -251,7 +262,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== MEDIA ===== -->
-<section class="sec" id="media"><div class="wrap">
+<section class="sec view" id="media"><div class="wrap">
   <div class="sechead">
     <div class="k">Fotos y video</div>
     <h2>Media</h2>
@@ -261,7 +272,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== SPONSORS ===== -->
-<section class="sponsors" id="sponsors"><div class="wrap">
+<section class="sponsors view" id="sponsors"><div class="wrap">
   <div class="sechead">
     <div class="k">Partners Oficiales</div>
     <h2>Sponsors</h2>
@@ -278,7 +289,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <footer><div class="wrap">
-  <a href="#inicio" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CAV</span></a>
+  <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w400" alt="GP3 · CAV"></a>
   <div class="fmeta">gp3sports.lat/cav · Campeonato Argentino de Velocidad</div>
   <div class="disc">GP3 Argentina · Temporada 2026</div>
 </div></footer>
@@ -456,6 +467,14 @@ function avatarHTML(p){
   renderPil(allCats[0]);
 })();
 
+/* Avatar chico para la tabla de ranking */
+window.rkErr=function(img,num){img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';};
+function rkAvatar(p){
+  var url=p.photo||PHOTOS[normKey(p.name)];
+  if(url){return '<span class="rkav"><img src="'+url+'" alt="" loading="lazy" onerror="rkErr(this,'+p.num+')"></span>';}
+  return '<span class="rkav"><span class="rknum">'+p.num+'</span></span>';
+}
+
 /* Ranking con tabs */
 (function(){
   var tabsEl=document.getElementById("rkTabs"),body=document.getElementById("rkBody");
@@ -468,9 +487,9 @@ function avatarHTML(p){
   window.renderRk=function(cat){
     var arr=CATS[cat];
     var rows=arr.map(function(p){
-      return '<tr><td class="p">'+p.pos+'</td><td class="n">#'+p.num+'</td><td>'+p.name+'</td><td class="pt">'+p.pts+'</td></tr>';
+      return '<tr><td class="p">'+p.pos+'</td><td class="av">'+rkAvatar(p)+'</td><td class="n">#'+p.num+'</td><td>'+p.name+'</td><td class="pt">'+p.pts+'</td></tr>';
     }).join("");
-    body.innerHTML='<table class="rktable"><thead><tr><th>Pos</th><th>N°</th><th>Piloto</th><th style="text-align:right">Pts</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    body.innerHTML='<table class="rktable"><thead><tr><th>Pos</th><th></th><th>N°</th><th>Piloto</th><th style="text-align:right">Pts</th></tr></thead><tbody>'+rows+'</tbody></table>';
   };
   renderRk(allCats[0]);
 })();
@@ -498,10 +517,26 @@ function avatarHTML(p){
     m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");});});}
 })();
 
-/* Scrollspy nav */
-(function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
-  window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
-    links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+/* Router: cada sección es una "página" (vista), no scroll */
+(function(){
+  var views=document.querySelectorAll(".view");
+  var ids={};views.forEach(function(v){ids[v.id]=v;});
+  var navlinks=document.querySelectorAll(".navlinks a.lnk");
+  function show(id){
+    if(!ids[id])id="inicio";
+    views.forEach(function(v){v.classList.toggle("show",v.id===id);});
+    navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id);});
+    window.scrollTo(0,0);
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute("href").slice(1);
+    if(ids[id]){e.preventDefault();
+      if(location.hash!=="#"+id){location.hash=id;}else{show(id);}
+      var m=document.getElementById("menu");if(m)m.classList.remove("open");}
+  });
+  window.addEventListener("hashchange",function(){show(location.hash.slice(1)||"inicio");});
+  show(location.hash.slice(1)||"inicio");
 })();
 </script>
 </body>

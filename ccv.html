@@ -10,14 +10,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://drive.google.com/thumbnail?id=1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2&sz=w128">
+<link rel="apple-touch-icon" href="https://drive.google.com/thumbnail?id=1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2&sz=w128">
 <style>
 :root{
-  /* ==== Manual de marca GP3 Sports · rojo / negro / blanco ==== */
-  --red:#EB0000; --celeste:#EB0000; --blue:#8f0000; --accent:#EB0000; --sky:#ff6a6a;
-  --white:#fff; --bg:#08080a; --surface:#111013; --surface2:#191418; --line:#2c2126;
-  --muted:#b7abae; --gold:#facc15; --green:#22c55e;
-  --grad:linear-gradient(120deg,#ff2d2d,#b00000);
-  --grad-dark:linear-gradient(160deg,#22060a 0%,#3a0a0f 45%,#08080a 100%);
+  /* ==== Manual de marca CCV · azul / rojo / blanco (bandera Chile) ==== */
+  --red:#EB0000; --celeste:#EB0000; --blue:#14499B; --accent:#EB0000; --sky:#8fc4f2;
+  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#141824; --line:#2a1d2a;
+  --muted:#c2b0b6; --gold:#facc15; --green:#22c55e;
+  --grad:linear-gradient(120deg,var(--blue),var(--red));
+  --grad-dark:linear-gradient(160deg,#0a1f47 0%,#3a0d15 60%,#05070d 100%);
   --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
   --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
@@ -133,6 +135,16 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .rktable td.pt{width:70px;text-align:right;font-family:var(--disp);font-size:17px}
 .rktable tr:first-child td{background:rgba(235,0,0,.08)}
 .rktable tr:first-child td.p{color:var(--gold)}
+.rktable td.av{width:46px;padding:6px 0 6px 12px}
+.rkav{display:inline-flex;width:34px;height:34px;border-radius:50%;overflow:hidden;background:var(--grad-dark);
+  border:1.5px solid var(--blue);align-items:center;justify-content:center;vertical-align:middle}
+.rkav img{width:100%;height:100%;object-fit:cover}
+.rkav .rknum{font-family:var(--disp);font-size:14px;color:var(--sky)}
+
+/* ===== VISTAS (páginas) ===== */
+.view{display:none}
+.view.show{display:block}
+.brandlogo{height:42px;width:auto;display:block}
 
 .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .newsc{background:var(--surface2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
@@ -160,7 +172,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 <body>
 
 <nav><div class="wrap">
-  <a href="index.html" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CCV</span></a>
+  <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2&sz=w400" alt="GP3 · CCV"></a>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="index.html">Inicio</a>
@@ -174,7 +186,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   </div>
 </div></nav>
 
-<header class="hero" id="inicio"><div class="wrap">
+<header class="hero view show" id="inicio"><div class="wrap">
   <div class="k">GP3 Chile</div>
   <h1>Campeonato<br><span class="b">Chileno</span> de Velocidad</h1>
   <p class="sub">¿Estás listo para vivir la velocidad al límite?</p>
@@ -191,7 +203,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   </div>
 </div></header>
 
-<section class="sec" id="calendario"><div class="wrap">
+<section class="sec view" id="calendario"><div class="wrap">
   <div class="sechead">
     <div class="k">Temporada 2026 · Chile + Argentina</div>
     <h2>Calendario</h2>
@@ -200,7 +212,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   <div class="cal" id="calGrid"></div>
 </div></section>
 
-<section class="sec alt" id="pilotos"><div class="wrap">
+<section class="sec alt view" id="pilotos"><div class="wrap">
   <div class="sechead">
     <div class="k">Grilla 2026 · Ranking Binacional</div>
     <h2>Pilotos por Categoría</h2>
@@ -210,7 +222,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   <div id="pilBody"></div>
 </div></section>
 
-<section class="sec" id="ranking"><div class="wrap">
+<section class="sec view" id="ranking"><div class="wrap">
   <div class="sechead">
     <div class="k">Ranking Binacional · Chile + Argentina</div>
     <h2>Ranking 2026</h2>
@@ -220,12 +232,12 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   <div class="rk" id="rkBody"></div>
 </div></section>
 
-<section class="sec alt" id="noticias"><div class="wrap">
+<section class="sec alt view" id="noticias"><div class="wrap">
   <div class="sechead"><div class="k">Lo último</div><h2>Noticias</h2></div>
   <div class="news" id="newsGrid"></div>
 </div></section>
 
-<section class="sec" id="media"><div class="wrap">
+<section class="sec view" id="media"><div class="wrap">
   <div class="sechead">
     <div class="k">Fotos y video</div>
     <h2>Media</h2>
@@ -235,7 +247,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== SPONSORS ===== -->
-<section class="sponsors" id="sponsors"><div class="wrap">
+<section class="sponsors view" id="sponsors"><div class="wrap">
   <div class="sechead">
     <div class="k">Partners Oficiales</div>
     <h2>Sponsors</h2>
@@ -252,7 +264,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 </div></section>
 
 <footer><div class="wrap">
-  <a href="index.html" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CCV</span></a>
+  <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2&sz=w400" alt="GP3 · CCV"></a>
   <div class="fmeta">gp3sports.lat/ccv · Campeonato Chileno de Velocidad</div>
   <div class="disc">GP3 Chile · Temporada 2026 · Chile + Argentina</div>
 </div></footer>
@@ -372,6 +384,12 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
   renderPil(allCats[0]);
 })();
 
+window.rkErr=function(img,num){img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';};
+function rkAvatar(p){
+  var url=p.photo||PHOTOS[normKey(p.name)];
+  if(url){return '<span class="rkav"><img src="'+url+'" alt="" loading="lazy" onerror="rkErr(this,'+p.num+')"></span>';}
+  return '<span class="rkav"><span class="rknum">'+p.num+'</span></span>';
+}
 (function(){
   var tabsEl=document.getElementById("rkTabs"),body=document.getElementById("rkBody");
   var allCats=[];FAMILIES.forEach(function(f){f.cats.forEach(function(c){allCats.push(c);});});
@@ -382,8 +400,8 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
   });
   window.renderRk=function(cat){
     var arr=CATS[cat];
-    var rows=arr.map(function(p){return '<tr><td class="p">'+p.pos+'</td><td class="n">#'+p.num+'</td><td>'+p.name+'</td><td class="pt">'+p.pts+'</td></tr>';}).join("");
-    body.innerHTML='<table class="rktable"><thead><tr><th>Pos</th><th>N°</th><th>Piloto</th><th style="text-align:right">Pts</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    var rows=arr.map(function(p){return '<tr><td class="p">'+p.pos+'</td><td class="av">'+rkAvatar(p)+'</td><td class="n">#'+p.num+'</td><td>'+p.name+'</td><td class="pt">'+p.pts+'</td></tr>';}).join("");
+    body.innerHTML='<table class="rktable"><thead><tr><th>Pos</th><th></th><th>N°</th><th>Piloto</th><th style="text-align:right">Pts</th></tr></thead><tbody>'+rows+'</tbody></table>';
   };
   renderRk(allCats[0]);
 })();
@@ -401,9 +419,26 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
   if(b){b.addEventListener("click",function(){m.classList.toggle("open");});
     m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");});});}
 })();
-(function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
-  window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
-    links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+/* Router: cada sección es una "página" (vista), no scroll */
+(function(){
+  var views=document.querySelectorAll(".view");
+  var ids={};views.forEach(function(v){ids[v.id]=v;});
+  var navlinks=document.querySelectorAll(".navlinks a.lnk");
+  function show(id){
+    if(!ids[id])id="inicio";
+    views.forEach(function(v){v.classList.toggle("show",v.id===id);});
+    navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id);});
+    window.scrollTo(0,0);
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute("href").slice(1);
+    if(ids[id]){e.preventDefault();
+      if(location.hash!=="#"+id){location.hash=id;}else{show(id);}
+      var m=document.getElementById("menu");if(m)m.classList.remove("open");}
+  });
+  window.addEventListener("hashchange",function(){show(location.hash.slice(1)||"inicio");});
+  show(location.hash.slice(1)||"inicio");
 })();
 </script>
 </body>
