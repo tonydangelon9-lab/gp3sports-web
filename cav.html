@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAV · Campeonato Argentino de Velocidad · GP3</title>
+<meta name="description" content="Campeonato Argentino de Velocidad (CAV) — GP3 Argentina. Calendario 2026, pilotos y ranking por categoría. SBK y GP3.">
+<meta property="og:title" content="CAV · Campeonato Argentino de Velocidad">
+<meta property="og:description" content="GP3 Argentina · Calendario, pilotos y ranking por categoría 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --celeste:#6CACE4; --blue:#14499B; --blue-deep:#0a2547; --sky:#8fc4f2;
+  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#111b2e; --line:#1d2c44;
+  --muted:#9fb4d0; --gold:#facc15; --green:#22c55e;
+  --grad:linear-gradient(120deg,var(--celeste),var(--blue));
+  --grad-dark:linear-gradient(160deg,#0a2547 0%,#0d356b 45%,#05070d 100%);
+  --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
+  --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--body);line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:90px}
+
+/* ===== LOGO (texto) ===== */
+.gp3logo{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);line-height:.9}
+.gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg);
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gp3logo .cav{font-size:13px;letter-spacing:.24em;color:var(--celeste);border-left:2px solid var(--celeste);padding-left:7px}
+
+/* ===== NAV ===== */
+nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.82);position:sticky;top:0;z-index:40;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px;position:relative}
+.navlinks{display:flex;gap:16px;align-items:center}
+.navlinks a.lnk{font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:var(--muted);white-space:nowrap}
+.navlinks a.lnk:hover,.navlinks a.lnk.active{color:#fff}
+.navlinks .btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);letter-spacing:.06em;
+  font-size:15px;color:#fff;background:var(--grad);border:none;border-radius:999px;padding:8px 18px;cursor:pointer}
+.navlinks .btn .dot{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}70%{box-shadow:0 0 0 7px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+@media(max-width:980px){
+  .navlinks{position:fixed;inset:74px 0 auto 0;background:rgba(5,7,13,.98);flex-direction:column;gap:0;
+    border-bottom:1px solid var(--line);padding:10px 0;transform:translateY(-140%);transition:transform .25s;z-index:39}
+  .navlinks.open{transform:translateY(0)}
+  .navlinks a.lnk{padding:15px 22px;width:100%;text-align:center;font-size:19px}
+  .navlinks .btn{margin:12px auto}
+  .burger{display:block}
+}
+
+/* ===== HERO ===== */
+.hero{background:var(--grad-dark);text-align:center;padding:64px 0 54px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(90deg,transparent 0 38px,rgba(108,172,228,.05) 38px 40px);pointer-events:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(108,172,228,.28),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .k{font-family:var(--disp);letter-spacing:.28em;font-size:14px;color:var(--celeste)}
+.hero h1{font-family:var(--disp);font-size:clamp(40px,9vw,86px);line-height:.92;margin:10px 0 6px;letter-spacing:.01em}
+.hero h1 .b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .sub{color:#d7e6fa;font-size:clamp(15px,2.2vw,19px);font-style:italic;font-weight:700;max-width:640px;margin:6px auto 0}
+.hero .facts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.hero .fact{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:8px 16px;
+  font-family:var(--disp);letter-spacing:.08em;font-size:14px;color:#eaf3ff}
+.hero .fact b{color:var(--celeste)}
+.next{margin-top:26px;display:inline-flex;flex-direction:column;gap:2px;background:rgba(10,37,71,.6);
+  border:1px solid var(--celeste);border-radius:16px;padding:14px 26px}
+.next .nk{font-family:var(--disp);letter-spacing:.2em;font-size:12px;color:var(--celeste)}
+.next .nv{font-family:var(--disp);font-size:26px}
+.next .nd{font-size:13px;color:var(--muted)}
+
+/* ===== SECTION TITLES ===== */
+.sec{padding:56px 0}
+.sec.alt{background:var(--surface)}
+.sechead{text-align:center;margin-bottom:34px}
+.sechead .k{font-family:var(--disp);letter-spacing:.24em;font-size:13px;color:var(--celeste)}
+.sechead h2{font-family:var(--disp);font-size:clamp(30px,5vw,50px);line-height:1;margin-top:6px}
+.sechead p{color:var(--muted);max-width:620px;margin:10px auto 0;font-size:15px}
+
+/* ===== CALENDARIO ===== */
+.cal{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.calc{background:var(--surface2);border:1px solid var(--line);border-left:4px solid var(--celeste);
+  border-radius:14px;padding:18px;position:relative;overflow:hidden}
+.calc .rnd{font-family:var(--disp);font-size:13px;letter-spacing:.16em;color:var(--celeste)}
+.calc .fecha{font-family:var(--disp);font-size:24px;margin:2px 0 8px}
+.calc .lugar{font-size:15px;font-weight:700}
+.calc .pais{font-size:13px;color:var(--muted);margin-top:2px}
+.calc .estado{position:absolute;top:14px;right:14px;font-family:var(--disp);font-size:11px;letter-spacing:.1em;
+  padding:3px 9px;border-radius:999px}
+.calc .estado.fin{background:rgba(159,180,208,.15);color:var(--muted)}
+.calc .estado.next{background:var(--grad);color:#fff}
+
+/* ===== TABS (categorías) ===== */
+.fam{margin-bottom:16px}
+.famh{font-family:var(--disp);font-size:20px;letter-spacing:.1em;color:var(--celeste);margin:26px 0 10px;
+  border-bottom:1px solid var(--line);padding-bottom:6px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
+.tab{font-family:var(--disp);letter-spacing:.06em;font-size:14px;color:var(--muted);background:var(--surface2);
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s}
+.tab:hover{color:#fff}
+.tab.active{background:var(--grad);color:#fff;border-color:transparent}
+
+/* ===== PILOTOS ===== */
+.catblock{margin-bottom:40px}
+.catname{font-family:var(--disp);font-size:clamp(22px,3.2vw,30px);letter-spacing:.06em;margin-bottom:4px}
+.catmeta{color:var(--muted);font-size:13px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.card{background:var(--surface2);border:1px solid var(--line);border-radius:16px;padding:16px;text-align:center;
+  position:relative;transition:.15s;overflow:hidden}
+.card:hover{border-color:var(--celeste);transform:translateY(-3px)}
+.card .pos{position:absolute;top:10px;left:10px;font-family:var(--disp);font-size:12px;color:var(--muted)}
+.card .lead{position:absolute;top:8px;right:10px;font-size:14px}
+.avatar{width:96px;height:96px;border-radius:50%;margin:6px auto 12px;position:relative;
+  display:flex;align-items:center;justify-content:center;background:var(--grad-dark);
+  border:2px solid var(--celeste);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avatar .num{font-family:var(--disp);font-size:38px;color:var(--celeste);letter-spacing:.02em}
+.card .pname{font-weight:700;font-size:15px;line-height:1.25;min-height:38px;display:flex;align-items:center;justify-content:center}
+.card .ppts{margin-top:8px;font-family:var(--disp);font-size:15px;letter-spacing:.06em;color:var(--celeste)}
+.card .ppts span{color:var(--muted);font-size:12px}
+
+/* ===== RANKING ===== */
+.rk{max-width:760px;margin:0 auto}
+.rktable{width:100%;border-collapse:collapse;background:var(--surface2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.rktable th{font-family:var(--disp);letter-spacing:.08em;font-size:13px;color:var(--celeste);text-align:left;
+  padding:12px 14px;background:rgba(10,37,71,.5)}
+.rktable td{padding:11px 14px;border-top:1px solid var(--line);font-size:15px}
+.rktable td.p{font-family:var(--disp);width:44px;color:var(--muted)}
+.rktable td.n{width:52px;color:var(--celeste);font-weight:700}
+.rktable td.pt{width:70px;text-align:right;font-family:var(--disp);font-size:17px}
+.rktable tr:first-child td{background:rgba(108,172,228,.08)}
+.rktable tr:first-child td.p{color:var(--gold)}
+
+/* ===== NOTICIAS ===== */
+.news{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.newsc{background:var(--surface2);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.newsc .ph{height:150px;background:var(--grad-dark);display:flex;align-items:center;justify-content:center;
+  font-family:var(--disp);letter-spacing:.14em;color:var(--celeste);font-size:16px;position:relative}
+.newsc .ph::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 30px,rgba(108,172,228,.06) 30px 32px)}
+.newsc .body{padding:16px}
+.newsc .tag{font-family:var(--disp);letter-spacing:.12em;font-size:11px;color:var(--celeste)}
+.newsc h3{font-size:17px;margin:6px 0 6px;line-height:1.25}
+.newsc p{color:var(--muted);font-size:14px}
+
+/* ===== FOOTER ===== */
+footer{border-top:1px solid var(--line);padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
+footer .gp3logo{margin-bottom:14px}
+footer .fmeta a{color:var(--celeste);text-decoration:underline}
+footer .disc{margin-top:10px;font-size:11px;opacity:.7}
+.note{max-width:760px;margin:22px auto 0;padding:14px 16px;border:1px dashed var(--line);border-radius:12px;
+  color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#inicio" class="gp3logo"><span class="gp3">GP3</span><span class="cav">CAV</span></a>
+  <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
+  <div class="navlinks" id="menu">
+    <a class="lnk" href="#inicio">Inicio</a>
+    <a class="lnk" href="#calendario">Calendario</a>
+    <a class="lnk" href="#pilotos">Pilotos</a>
+    <a class="lnk" href="#ranking">Ranking 2026</a>
+    <a class="lnk" href="#noticias">Noticias</a>
+    <a class="lnk" href="#media">Media</a>
+    <a class="btn" id="liveBtn" href="#"><span class="dot"></span>EN VIVO</a>
+  </div>
+</div></nav>
+
+<!-- ===== INICIO ===== -->
+<header class="hero" id="inicio"><div class="wrap">
+  <div class="k">GP3 Argentina</div>
+  <h1>Campeonato<br><span class="b">Argentino</span> de Velocidad</h1>
+  <p class="sub">¿Estás listo para vivir la velocidad al límite?</p>
+  <div class="facts">
+    <div class="fact"><b>7</b> Fechas</div>
+    <div class="fact"><b>9</b> Categorías</div>
+    <div class="fact">Temporada <b>2026</b></div>
+    <div class="fact">SBK · GP3 · Sportbike</div>
+  </div>
+  <div class="next">
+    <div class="nk">Próxima Fecha</div>
+    <div class="nv">Concordia</div>
+    <div class="nd">Fecha 4 · 7 al 9 de Agosto 2026</div>
+  </div>
+</div></header>
+
+<!-- ===== CALENDARIO ===== -->
+<section class="sec" id="calendario"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Temporada 2026</div>
+    <h2>Calendario</h2>
+    <p>Siete fechas del Campeonato Argentino de Velocidad 2026.</p>
+  </div>
+  <div class="cal" id="calGrid"></div>
+</div></section>
+
+<!-- ===== PILOTOS ===== -->
+<section class="sec alt" id="pilotos"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Grilla 2026</div>
+    <h2>Pilotos por Categoría</h2>
+    <p>Filtrá por categoría. Los pilotos se ordenan por su posición en el campeonato.</p>
+  </div>
+  <div class="tabs" id="pilTabs"></div>
+  <div id="pilBody"></div>
+</div></section>
+
+<!-- ===== RANKING ===== -->
+<section class="sec" id="ranking"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Actualizado · San Nicolás (Fecha 3)</div>
+    <h2>Ranking 2026</h2>
+    <p>Tabla de posiciones por categoría.</p>
+  </div>
+  <div class="tabs" id="rkTabs"></div>
+  <div class="rk" id="rkBody"></div>
+</div></section>
+
+<!-- ===== NOTICIAS ===== -->
+<section class="sec alt" id="noticias"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Lo último</div>
+    <h2>Noticias</h2>
+  </div>
+  <div class="news" id="newsGrid"></div>
+</div></section>
+
+<!-- ===== MEDIA ===== -->
+<section class="sec" id="media"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Fotos y video</div>
+    <h2>Media</h2>
+    <p>Galería oficial del campeonato — fecha a fecha.</p>
+  </div>
+  <div class="news" id="mediaGrid"></div>
+</div></section>
+
+<footer><div class="wrap">
+  <a href="#inicio" class="gp3logo"><span class="gp3">GP3</span><span class="cav">CAV</span></a>
+  <div class="fmeta">gp3sports.lat/cav · Campeonato Argentino de Velocidad</div>
+  <div class="disc">GP3 Argentina · Temporada 2026</div>
+</div></footer>
+
+<script>
+/* ============ DATOS ============ */
+var CAL=[
+ {n:1,fecha:"3 – 5 Abril",lugar:"Termas de Río Hondo",pais:"Santiago del Estero, Argentina",estado:"fin"},
+ {n:2,fecha:"22 – 24 Mayo",lugar:"Toay",pais:"La Pampa, Argentina",estado:"fin"},
+ {n:3,fecha:"19 – 21 Junio",lugar:"San Nicolás",pais:"Buenos Aires, Argentina",estado:"fin"},
+ {n:4,fecha:"7 – 9 Agosto",lugar:"Concordia",pais:"Entre Ríos, Argentina",estado:"next"},
+ {n:5,fecha:"4 – 6 Septiembre",lugar:"San Juan Villicum",pais:"San Juan, Argentina",estado:""},
+ {n:6,fecha:"9 – 11 Octubre",lugar:"Termas de Río Hondo",pais:"Santiago del Estero, Argentina",estado:""},
+ {n:7,fecha:"13 – 15 Noviembre",lugar:"San Juan Villicum",pais:"San Juan, Argentina",estado:""}
+];
+
+/* Orden de categorías por familia. photo:"" -> muestra el número (se puede reemplazar por URL de foto). */
+var FAMILIES=[
+ {fam:"GP3", cats:["GP3 EXPERTO","GP3 AMATEUR","GP3 PROMOCIONAL"]},
+ {fam:"SBK", cats:["SBK PRO","SBK EXPERTO","SBK SENIOR","SBK PROMOCIONAL","SBK AMATEUR"]},
+ {fam:"Sportbike", cats:["SPORTBIKE"]}
+];
+
+var CATS={
+ "GP3 EXPERTO":[
+  {pos:1,num:86,name:"José María Plaja",pts:42},
+  {pos:2,num:29,name:"Mariano Villalobos",pts:41},
+  {pos:3,num:49,name:"Federico Márquez",pts:35},
+  {pos:4,num:13,name:"Ariel Gabarini",pts:34},
+  {pos:5,num:22,name:"Santiago Gossa",pts:18},
+  {pos:6,num:47,name:"Virginia Guidetti",pts:18},
+  {pos:7,num:888,name:"Ayrton Naveira",pts:11},
+  {pos:8,num:26,name:"Cristóbal Riveros",pts:10},
+  {pos:9,num:24,name:"Fabricio Ávalos",pts:6},
+  {pos:10,num:129,name:"Lucas Jaramillo",pts:3}
+ ],
+ "GP3 AMATEUR":[
+  {pos:1,num:111,name:"Augusto Caviglia",pts:57},
+  {pos:2,num:69,name:"José Ignacio Sartor",pts:41},
+  {pos:3,num:99,name:"Lucas Brizuela",pts:32},
+  {pos:4,num:11,name:"Santiago Zinno",pts:27},
+  {pos:5,num:87,name:"Javier Alvarez",pts:26},
+  {pos:6,num:18,name:"Rafael Mossetto",pts:12},
+  {pos:7,num:73,name:"Agustín Gagliardo",pts:9},
+  {pos:8,num:24,name:"Fabricio Ávalos",pts:6},
+  {pos:9,num:96,name:"Nicolás Gómez",pts:0}
+ ],
+ "GP3 PROMOCIONAL":[
+  {pos:1,num:37,name:"Manuel Barrionuevo",pts:46},
+  {pos:2,num:64,name:"Facundo Romero",pts:43},
+  {pos:3,num:23,name:"Pablo Tarantino",pts:37},
+  {pos:4,num:72,name:"Mayte Fernández",pts:19},
+  {pos:5,num:95,name:"Gaspar González",pts:15}
+ ],
+ "SBK PRO":[
+  {pos:1,num:52,name:"Juan Solorza",pts:44},
+  {pos:2,num:11,name:"Claudio López",pts:38},
+  {pos:3,num:28,name:"Mateo Bongiovanni",pts:35},
+  {pos:4,num:123,name:"Maximiliano Rocha",pts:34},
+  {pos:5,num:73,name:"Tomás Cassano",pts:30},
+  {pos:6,num:26,name:"Maximiliano Fontecilla",pts:17},
+  {pos:7,num:33,name:"Alberto Auad Cavallotti",pts:15},
+  {pos:8,num:47,name:"Vicente Kruger",pts:15},
+  {pos:9,num:121,name:"Guillermo Chamorro",pts:8},
+  {pos:10,num:27,name:"Pablo Gamberini",pts:8}
+ ],
+ "SBK EXPERTO":[
+  {pos:1,num:17,name:"Francisco Vélez",pts:60},
+  {pos:2,num:22,name:"Felipe Gini",pts:50},
+  {pos:3,num:21,name:"Gastón Rosato",pts:45},
+  {pos:4,num:85,name:"Alejandro Dalbon",pts:30},
+  {pos:5,num:9,name:"Javier De Buono",pts:14},
+  {pos:6,num:7,name:"Ariel Quse",pts:13},
+  {pos:7,num:128,name:"Cristian Albiñana",pts:13},
+  {pos:8,num:80,name:"Valentín Romero",pts:13},
+  {pos:9,num:121,name:"Guillermo Chamorro",pts:11},
+  {pos:10,num:82,name:"Leonardo Villegas",pts:9}
+ ],
+ "SBK SENIOR":[
+  {pos:1,num:53,name:"Gerardo Crisafulli",pts:44},
+  {pos:2,num:12,name:"Alexis Varlan",pts:32},
+  {pos:3,num:19,name:"Pedro Arrebola",pts:31},
+  {pos:4,num:13,name:"Jorge Gauna",pts:29},
+  {pos:5,num:98,name:"Carlos Alejandro Bonello",pts:22},
+  {pos:6,num:121,name:"Walter Páez",pts:18},
+  {pos:7,num:27,name:"Pablo Gamberini",pts:18},
+  {pos:8,num:45,name:"Luis Martínez",pts:15},
+  {pos:9,num:28,name:"Elgar Eliot",pts:15},
+  {pos:10,num:87,name:"Mariano Kassardjian",pts:10}
+ ],
+ "SBK PROMOCIONAL":[
+  {pos:1,num:16,name:"Mauro Finco",pts:54},
+  {pos:2,num:22,name:"Sebastián Pablo",pts:50},
+  {pos:3,num:124,name:"Tomás Galván",pts:27},
+  {pos:4,num:94,name:"Miguel Rubiolo",pts:19},
+  {pos:5,num:33,name:"Ignacio Bourse",pts:15},
+  {pos:6,num:77,name:"Mateo Racca",pts:15},
+  {pos:7,num:57,name:"Ives Rosso",pts:10}
+ ],
+ "SBK AMATEUR":[
+  {pos:1,num:43,name:"Sergio Cocha",pts:22},
+  {pos:2,num:22,name:"Gabriel Juan",pts:18}
+ ],
+ "SPORTBIKE":[
+  {pos:1,num:121,name:"Gastón Martínez",pts:48},
+  {pos:2,num:33,name:"Ignacio Lemos",pts:48},
+  {pos:3,num:32,name:"Valentín Valor",pts:5}
+ ]
+};
+
+var NEWS=[
+ {tag:"SBK Experto",title:"Francisco Vélez manda en SBK Experto",text:"Con 60 puntos, el #17 lidera la categoría más peleada tras la fecha de San Nicolás, seguido por Felipe Gini y Gastón Rosato."},
+ {tag:"GP3 Amateur",title:"Caviglia se escapa en GP3 Amateur",text:"Augusto Caviglia (#111) suma 57 puntos y saca 16 de ventaja sobre José Ignacio Sartor en la punta del campeonato."},
+ {tag:"Sportbike",title:"Martínez y Lemos, empate en la cima",text:"Gastón Martínez e Ignacio Lemos igualan en 48 puntos en Sportbike: la definición promete en Concordia."},
+ {tag:"Calendario",title:"Concordia, la próxima cita",text:"La Fecha 4 se corre del 7 al 9 de agosto en Concordia, Entre Ríos. Arranca la segunda mitad de la temporada."}
+];
+
+/* ============ RENDER ============ */
+function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;}
+
+/* Calendario */
+(function(){var g=document.getElementById("calGrid");CAL.forEach(function(f){
+  var estado=f.estado==="next"?'<span class="estado next">Próxima</span>':(f.estado==="fin"?'<span class="estado fin">Finalizada</span>':"");
+  var c=el("div","calc",
+    estado+
+    '<div class="rnd">Fecha '+f.n+'</div>'+
+    '<div class="fecha">'+f.fecha+'</div>'+
+    '<div class="lugar">'+f.lugar+'</div>'+
+    '<div class="pais">'+f.pais+'</div>');
+  g.appendChild(c);
+});})();
+
+/* Avatar (número o foto). Si falla la foto, cae al número. */
+window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+num+'</span>';};
+function avatarHTML(p){
+  if(p.photo){return '<div class="avatar"><img src="'+p.photo+'" alt="'+p.name+'" onerror="avImgErr(this,'+p.num+')"></div>';}
+  return '<div class="avatar"><span class="num">'+p.num+'</span></div>';
+}
+
+/* Pilotos con tabs por familia+categoría */
+(function(){
+  var tabsEl=document.getElementById("pilTabs"),body=document.getElementById("pilBody");
+  var allCats=[];FAMILIES.forEach(function(f){f.cats.forEach(function(c){allCats.push(c);});});
+  // tab "Todas"
+  var tabs=[{key:"__all",label:"Todas"}].concat(allCats.map(function(c){return {key:c,label:c};}));
+  tabs.forEach(function(t,i){
+    var b=el("button","tab"+(i===0?" active":""),t.label);
+    b.onclick=function(){document.querySelectorAll("#pilTabs .tab").forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderPil(t.key);};
+    tabsEl.appendChild(b);
+  });
+  function catBlock(cat){
+    var arr=CATS[cat];
+    var wrap=el("div","catblock");
+    wrap.appendChild(el("div","catname",cat));
+    wrap.appendChild(el("div","catmeta",arr.length+" pilotos · líder "+arr[0].name+" ("+arr[0].pts+" pts)"));
+    var g=el("div","grid");
+    arr.forEach(function(p){
+      var lead=p.pos===1?'<span class="lead">🏆</span>':"";
+      var card=el("div","card",
+        '<span class="pos">'+p.pos+'º</span>'+lead+
+        avatarHTML(p)+
+        '<div class="pname">'+p.name+'</div>'+
+        '<div class="ppts">'+p.pts+' <span>pts</span></div>');
+      g.appendChild(card);
+    });
+    wrap.appendChild(g);
+    return wrap;
+  }
+  window.renderPil=function(key){
+    body.innerHTML="";
+    var cats=key==="__all"?allCats:[key];
+    cats.forEach(function(c){body.appendChild(catBlock(c));});
+  };
+  renderPil("__all");
+})();
+
+/* Ranking con tabs */
+(function(){
+  var tabsEl=document.getElementById("rkTabs"),body=document.getElementById("rkBody");
+  var allCats=[];FAMILIES.forEach(function(f){f.cats.forEach(function(c){allCats.push(c);});});
+  allCats.forEach(function(c,i){
+    var b=el("button","tab"+(i===0?" active":""),c);
+    b.onclick=function(){document.querySelectorAll("#rkTabs .tab").forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderRk(c);};
+    tabsEl.appendChild(b);
+  });
+  window.renderRk=function(cat){
+    var arr=CATS[cat];
+    var rows=arr.map(function(p){
+      return '<tr><td class="p">'+p.pos+'</td><td class="n">#'+p.num+'</td><td>'+p.name+'</td><td class="pt">'+p.pts+'</td></tr>';
+    }).join("");
+    body.innerHTML='<table class="rktable"><thead><tr><th>Pos</th><th>N°</th><th>Piloto</th><th style="text-align:right">Pts</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  };
+  renderRk(allCats[0]);
+})();
+
+/* Noticias */
+(function(){var g=document.getElementById("newsGrid");NEWS.forEach(function(n){
+  g.appendChild(el("div","newsc",
+    '<div class="ph">GP3 · CAV</div>'+
+    '<div class="body"><div class="tag">'+n.tag+'</div><h3>'+n.title+'</h3><p>'+n.text+'</p></div>'));
+});})();
+
+/* Media (placeholder por fecha) */
+(function(){var g=document.getElementById("mediaGrid");
+  var ev=[["Termas de Río Hondo","Fecha 1 · Abril"],["Toay","Fecha 2 · Mayo"],["San Nicolás","Fecha 3 · Junio"]];
+  ev.forEach(function(e){
+    g.appendChild(el("div","newsc",
+      '<div class="ph">'+e[0]+'</div>'+
+      '<div class="body"><div class="tag">Galería</div><h3>'+e[0]+'</h3><p>'+e[1]+' — fotos y video del fin de semana.</p></div>'));
+  });
+})();
+
+/* Nav móvil */
+(function(){var b=document.getElementById("burger"),m=document.getElementById("menu");
+  if(b){b.addEventListener("click",function(){m.classList.toggle("open");});
+    m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");});});}
+})();
+
+/* Scrollspy nav */
+(function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
+  window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
+    links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+})();
+</script>
+</body>
+</html>

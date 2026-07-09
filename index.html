@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GP3 Sports · 18 años acelerando a fondo</title>
+<meta name="description" content="GP3 Sports — formación de pilotos latinoamericanos rumbo al MotoGP. Campeonatos CCV, CAV y Moto4 Latin Cup. Fundada en 2007.">
+<meta property="og:title" content="GP3 Sports">
+<meta property="og:description" content="18 años acelerando a fondo. El puente entre el motociclismo latinoamericano y el mundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --celeste:#EB0000; --blue:#14499B; --blue-deep:#0a2547; --sky:#8fc4f2;
+  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#141824; --line:#2a1d2a;
+  --muted:#c2b0b6; --gold:#facc15;
+  --grad:linear-gradient(120deg,var(--blue),var(--celeste));
+  --grad-dark:linear-gradient(160deg,#0a1f47 0%,#3a0d15 60%,#05070d 100%);
+  --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
+  --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--body);line-height:1.5}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+a{color:inherit;text-decoration:none}
+section{scroll-margin-top:90px}
+
+.gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
+.gp3logo .gp3{font-size:30px;font-style:italic;transform:skewX(-8deg);background:linear-gradient(120deg,#ff3030,#b30000);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gp3logo .sp{font-size:13px;letter-spacing:.2em;color:#EB0000;border-left:2px solid #EB0000;padding-left:8px}
+.brandimg{display:inline-flex;align-items:center}
+.brandimg img{height:46px;display:block;width:auto}
+footer .brandimg{justify-content:center}
+footer .brandimg img{height:62px;margin:0 auto 14px}
+
+nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.82);position:sticky;top:0;z-index:40;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+.navlinks{display:flex;gap:16px;align-items:center}
+.navlinks a.lnk{font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:var(--muted);white-space:nowrap}
+.navlinks a.lnk:hover,.navlinks a.lnk.active{color:#fff}
+.navlinks .btn{font-family:var(--disp);letter-spacing:.06em;font-size:15px;color:#fff;background:var(--grad);border-radius:999px;padding:8px 18px}
+.burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+@media(max-width:980px){
+  .navlinks{position:fixed;inset:74px 0 auto 0;background:rgba(5,7,13,.98);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:10px 0;transform:translateY(-140%);transition:transform .25s;z-index:39}
+  .navlinks.open{transform:translateY(0)}
+  .navlinks a.lnk{padding:15px 22px;width:100%;text-align:center;font-size:19px}
+  .navlinks .btn{margin:12px auto}
+  .burger{display:block}
+}
+
+.hero{background:var(--grad-dark);text-align:center;padding:74px 0 60px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(235,0,0,.05) 40px 42px)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(235,0,0,.28),transparent 70%)}
+.hero .wrap{position:relative;z-index:1}
+.hero .k{font-family:var(--disp);letter-spacing:.3em;font-size:14px;color:var(--celeste)}
+.hero h1{font-family:var(--disp);font-size:clamp(46px,11vw,110px);line-height:.9;margin:8px 0}
+.hero h1 .b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{font-family:var(--disp);letter-spacing:.14em;font-size:clamp(16px,3vw,24px);color:#eaf3ff}
+.hero .sub{color:#d7e6fa;font-size:clamp(15px,2.2vw,18px);max-width:640px;margin:16px auto 0}
+.hero .facts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.hero .fact{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-family:var(--disp);letter-spacing:.08em;font-size:14px;color:#eaf3ff}
+.hero .fact b{color:var(--celeste)}
+
+.sec{padding:60px 0}
+.sec.alt{background:var(--surface)}
+.sechead{text-align:center;margin-bottom:34px}
+.sechead .k{font-family:var(--disp);letter-spacing:.24em;font-size:13px;color:var(--celeste)}
+.sechead h2{font-family:var(--disp);font-size:clamp(30px,5vw,50px);line-height:1;margin-top:6px}
+.sechead p{color:var(--muted);max-width:680px;margin:10px auto 0;font-size:15px}
+
+.story{max-width:820px;margin:0 auto;text-align:center}
+.story p{color:#dbe7f6;font-size:17px;line-height:1.7;margin-bottom:16px}
+.story b{color:#fff}
+
+.timeline{max-width:760px;margin:36px auto 0;position:relative}
+.timeline::before{content:"";position:absolute;left:70px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl{display:flex;gap:22px;align-items:flex-start;margin-bottom:22px;position:relative}
+.tl .yr{font-family:var(--disp);font-size:26px;color:var(--celeste);width:60px;text-align:right;flex:0 0 60px}
+.tl .dot{width:14px;height:14px;border-radius:50%;background:var(--grad);margin-top:6px;flex:0 0 14px;z-index:1;box-shadow:0 0 0 4px var(--bg)}
+.tl .txt{color:#dbe7f6;font-size:15px;padding-top:2px}
+@media(max-width:560px){.timeline::before{left:50px}.tl .yr{width:44px;flex-basis:44px;font-size:20px}}
+
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:0 auto}
+@media(max-width:720px){.mv{grid-template-columns:1fr}}
+.mvc{background:var(--surface2);border:1px solid var(--line);border-top:3px solid var(--celeste);border-radius:16px;padding:24px}
+.mvc h3{font-family:var(--disp);letter-spacing:.1em;font-size:22px;color:var(--celeste);margin-bottom:10px}
+.mvc p{color:#dbe7f6;font-size:15px;line-height:1.6}
+
+/* ===== TRES CUADROS ===== */
+.brands{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.brands{grid-template-columns:1fr}}
+.brand{position:relative;display:block;border-radius:20px;overflow:hidden;border:1px solid var(--line);
+  background:var(--grad-dark);min-height:230px;padding:28px;transition:.18s}
+.brand::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 32px,rgba(235,0,0,.06) 32px 34px);opacity:.8}
+.brand:hover{transform:translateY(-4px);border-color:var(--celeste);box-shadow:0 18px 40px rgba(10,37,71,.6)}
+.brand .inner{position:relative;z-index:1;height:100%;display:flex;flex-direction:column}
+.brand .blogo{font-family:var(--disp);font-style:italic;transform:skewX(-8deg);font-size:44px;line-height:.9;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .bsub{font-family:var(--disp);letter-spacing:.16em;font-size:14px;color:var(--celeste);margin-top:4px}
+.brand .bdesc{color:#cfe0f4;font-size:14px;margin-top:12px;flex:1}
+.brand .go{font-family:var(--disp);letter-spacing:.08em;font-size:15px;color:#fff;margin-top:14px}
+.brand .flag{position:absolute;top:22px;right:24px;font-size:22px;z-index:1}
+.brand.soon .badge{display:inline-block;margin-top:12px;font-family:var(--disp);letter-spacing:.12em;font-size:12px;color:#eaf3ff;border:1px solid var(--celeste);border-radius:999px;padding:4px 12px}
+
+/* ===== ECOSISTEMA ===== */
+.eco{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.ecoc{background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:18px}
+.ecoc h4{font-family:var(--disp);letter-spacing:.08em;font-size:18px;color:var(--celeste);margin-bottom:6px}
+.ecoc p{color:var(--muted);font-size:14px;line-height:1.5}
+
+/* ===== INTRANET CTA ===== */
+.intra{background:var(--grad-dark);border:1px solid var(--celeste);border-radius:20px;padding:34px;text-align:center;max-width:760px;margin:0 auto;position:relative;overflow:hidden}
+.intra::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 34px,rgba(235,0,0,.06) 34px 36px)}
+.intra .inner{position:relative;z-index:1}
+.intra h2{font-family:var(--disp);font-size:34px;letter-spacing:.06em}
+.intra p{color:#cfe0f4;margin:8px auto 18px;max-width:520px}
+.intra a{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:#fff;background:var(--grad);border-radius:999px;padding:12px 26px}
+
+footer{border-top:1px solid var(--line);padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
+footer .gp3logo{margin-bottom:14px}
+footer .fmeta a{color:var(--celeste);text-decoration:underline}
+footer .disc{margin-top:8px;font-size:11px;opacity:.7}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#inicio" class="brandimg"><img src="https://gp3sports.lat/gp3-logo.png" alt="GP3 Sports LATAM"></a>
+  <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
+  <div class="navlinks" id="menu">
+    <a class="lnk" href="#inicio">Inicio</a>
+    <a class="lnk" href="#historia">Historia</a>
+    <a class="lnk" href="#campeonatos">Campeonatos</a>
+    <a class="lnk" href="#ecosistema">Ecosistema</a>
+    <a class="btn" href="intranet/">Intranet</a>
+  </div>
+</div></nav>
+
+<!-- ===== INICIO ===== -->
+<header class="hero" id="inicio"><div class="wrap">
+  <div class="k">Est. 2007</div>
+  <h1><span class="b">GP3</span> Sports</h1>
+  <div class="tag">18 años acelerando a fondo</div>
+  <p class="sub">Formamos pilotos latinoamericanos y los conectamos con los grandes campeonatos del mundo. De Chile a Europa, el camino al MotoGP empieza acá.</p>
+  <div class="facts">
+    <div class="fact">Fundada en <b>2007</b></div>
+    <div class="fact">Base en <b>Chile</b></div>
+    <div class="fact">Latinoamérica <b>&</b> Europa</div>
+  </div>
+</div></header>
+
+<!-- ===== HISTORIA ===== -->
+<section class="sec" id="historia"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Quiénes somos</div>
+    <h2>Nuestra Historia</h2>
+  </div>
+  <div class="story">
+    <p><b>GP3 Sports fue fundada en 2007 por su CEO, Antonio D'Angelo.</b> Con base en Chile y actividades en Latinoamérica y Europa, su enfoque está en la formación de pilotos jóvenes, entregándoles la posibilidad real de convertirse en profesionales.</p>
+    <p>Desde la organización del campeonato nacional hasta el primer equipo latinoamericano en competir en Europa, GP3 Sports construyó un ecosistema completo: campeonatos, academia, kartódromo y un camino oficial que une el talento de la región con el motociclismo mundial.</p>
+  </div>
+  <div class="timeline">
+    <div class="tl"><div class="yr">2007</div><div class="dot"></div><div class="txt">Nace GP3 Sports, fundada por Antonio D'Angelo.</div></div>
+    <div class="tl"><div class="yr">2008</div><div class="dot"></div><div class="txt">Designación como organizador del Campeonato Nacional GP3 Chile.</div></div>
+    <div class="tl"><div class="yr">2020</div><div class="dot"></div><div class="txt">Crea el Team AD11 en Italia: el primer equipo de latinos en correr en Europa.</div></div>
+    <div class="tl"><div class="yr">2021</div><div class="dot"></div><div class="txt">Obtiene la administración del kartódromo en Requínoa, Región de O'Higgins.</div></div>
+    <div class="tl"><div class="yr">2023</div><div class="dot"></div><div class="txt">Crea la Latin America Talent Cup, un hito para el motociclismo regional (primera edición en 2025).</div></div>
+    <div class="tl"><div class="yr">2024</div><div class="dot"></div><div class="txt">Nace GP3 Junior, para el desarrollo y captación de nuevos pilotos en Chile.</div></div>
+  </div>
+</div></section>
+
+<!-- ===== MISIÓN Y VISIÓN ===== -->
+<section class="sec alt"><div class="wrap">
+  <div class="sechead"><div class="k">Nuestro norte</div><h2>Misión y Visión</h2></div>
+  <div class="mv">
+    <div class="mvc">
+      <h3>Misión</h3>
+      <p>Promover el talento latinoamericano en el motociclismo, brindando a pilotos emergentes oportunidades únicas de crecimiento y desarrollo, mientras conectamos comunidades apasionadas por este deporte a través de experiencias competitivas de alto nivel.</p>
+    </div>
+    <div class="mvc">
+      <h3>Visión</h3>
+      <p>Convertirnos en el puente que conecte el motociclismo sudamericano con los grandes campeonatos internacionales, consolidando nuestra región como una cuna de pilotos destacados y un referente en el mundo del deporte motorizado.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===== TRES CUADROS / CAMPEONATOS ===== -->
+<section class="sec" id="campeonatos"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Nuestros campeonatos</div>
+    <h2>Elegí tu pista</h2>
+    <p>Tres campeonatos, un mismo camino: del talento local a la escena internacional.</p>
+  </div>
+  <div class="brands">
+    <a class="brand" href="ccv.html">
+      <span class="flag">🇨🇱</span>
+      <div class="inner">
+        <div class="blogo" style="background:linear-gradient(120deg,#14499B,#EB0000);-webkit-background-clip:text;background-clip:text;color:transparent">CCV</div>
+        <div class="bsub" style="color:#EB0000">GP3 Chile</div>
+        <div class="bdesc">Campeonato Chileno de Velocidad. Binacional Chile + Argentina, 8 categorías entre SBK y GP3.</div>
+        <div class="go">Entrar →</div>
+      </div>
+    </a>
+    <a class="brand" href="https://moto4latincup.lat">
+      <span class="flag">🌎</span>
+      <div class="inner">
+        <div class="blogo" style="font-size:38px;background:linear-gradient(120deg,#D63DFC,#8b12b0);-webkit-background-clip:text;background-clip:text;color:transparent">Moto4</div>
+        <div class="bsub" style="color:#D63DFC">Latin Cup</div>
+        <div class="bdesc">Moto4 Latin Cup — la puerta de entrada oficial de Latinoamérica a la pirámide mundial del MotoGP.</div>
+        <div class="go">Entrar →</div>
+      </div>
+    </a>
+    <a class="brand" href="cav.html">
+      <span class="flag">🇦🇷</span>
+      <div class="inner">
+        <div class="blogo" style="background:linear-gradient(120deg,#6CACE4,#14499B);-webkit-background-clip:text;background-clip:text;color:transparent">CAV</div>
+        <div class="bsub" style="color:#6CACE4">GP3 Argentina</div>
+        <div class="bdesc">Campeonato Argentino de Velocidad. 7 fechas y 9 categorías entre SBK, GP3 y Sportbike.</div>
+        <div class="go">Entrar →</div>
+      </div>
+    </a>
+  </div>
+</div></section>
+
+<!-- ===== ECOSISTEMA ===== -->
+<section class="sec alt" id="ecosistema"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Más que campeonatos</div>
+    <h2>El Ecosistema GP3</h2>
+    <p>Una estructura completa de formación, competición y proyección internacional.</p>
+  </div>
+  <div class="eco">
+    <div class="ecoc"><h4>Team AD11 · Italia</h4><p>El primer equipo latinoamericano reconocido por la FIM LA en competir en el Campeonato Italiano. Internacionaliza tu carrera.</p></div>
+    <div class="ecoc"><h4>Latin America Talent Cup</h4><p>La primera Talent Cup de la región latinoamericana: el camino oficial para llegar al MotoGP.</p></div>
+    <div class="ecoc"><h4>GP3 Junior</h4><p>Campeonato de desarrollo enfocado en la categoría amateur, preparando a los nuevos pilotos para el nacional.</p></div>
+    <div class="ecoc"><h4>GP3 Racing Park</h4><p>Kartódromo de referencia para los pilotos GP3, ubicado en Rancagua. Te preparás para correr.</p></div>
+  </div>
+</div></section>
+
+<!-- ===== INTRANET ===== -->
+<section class="sec"><div class="wrap">
+  <div class="intra"><div class="inner">
+    <h2>Intranet GP3</h2>
+    <p>Acceso al material interno y a los módulos de gestión del equipo.</p>
+    <a href="intranet/">🔒 Entrar a la Intranet</a>
+  </div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <a href="#inicio" class="brandimg"><img src="https://gp3sports.lat/gp3-logo.png" alt="GP3 Sports LATAM"></a>
+  <div class="fmeta">gp3sports.lat · Formación de pilotos rumbo al MotoGP</div>
+  <div class="disc">GP3 Sports © 2007–2026 · Chile · Latinoamérica · Europa</div>
+</div></footer>
+
+<script>
+(function(){var b=document.getElementById("burger"),m=document.getElementById("menu");
+  if(b){b.addEventListener("click",function(){m.classList.toggle("open");});
+    m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");});});}
+})();
+(function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
+  window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
+    links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+})();
+</script>
+</body>
+</html>
