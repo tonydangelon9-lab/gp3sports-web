@@ -12,11 +12,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --red:#EB0000; --blue:#14499B; --accent:#EB0000; --sky:#8fc4f2;
-  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#141824; --line:#2a1d2a;
-  --muted:#c2b0b6; --gold:#facc15; --green:#22c55e;
-  --grad:linear-gradient(120deg,var(--blue),var(--red));
-  --grad-dark:linear-gradient(160deg,#0a1f47 0%,#3a0d15 60%,#05070d 100%);
+  /* ==== Manual de marca GP3 Sports · rojo / negro / blanco ==== */
+  --red:#EB0000; --celeste:#EB0000; --blue:#8f0000; --accent:#EB0000; --sky:#ff6a6a;
+  --white:#fff; --bg:#08080a; --surface:#111013; --surface2:#191418; --line:#2c2126;
+  --muted:#b7abae; --gold:#facc15; --green:#22c55e;
+  --grad:linear-gradient(120deg,#ff2d2d,#b00000);
+  --grad-dark:linear-gradient(160deg,#22060a 0%,#3a0a0f 45%,#08080a 100%);
   --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
   --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
@@ -27,9 +28,10 @@ body{background:var(--bg);color:var(--white);font-family:var(--body);line-height
 a{color:inherit;text-decoration:none}
 section{scroll-margin-top:90px}
 
-.gp3logo{display:inline-flex;align-items:center;gap:7px;font-family:var(--disp);line-height:.9}
-.gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg);
-  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
+.gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg)}
+.gp3logo .gp3 .g{color:#fff}
+.gp3logo .gp3 .r{color:var(--red)}
 .gp3logo .cav{font-size:13px;letter-spacing:.24em;color:var(--red);border-left:2px solid var(--red);padding-left:7px}
 
 nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.82);position:sticky;top:0;z-index:40;
@@ -93,9 +95,15 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 
 .tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:28px}
 .tab{font-family:var(--disp);letter-spacing:.06em;font-size:14px;color:var(--muted);background:var(--surface2);
-  border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s}
-.tab:hover{color:#fff}
+  border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s;white-space:nowrap}
+.tab:hover{color:#fff;border-color:var(--red)}
 .tab.active{background:var(--grad);color:#fff;border-color:transparent}
+@media(max-width:640px){
+  .tabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:8px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto}
+}
 
 .catblock{margin-bottom:40px}
 .catname{font-family:var(--disp);font-size:clamp(22px,3.2vw,30px);letter-spacing:.06em;margin-bottom:4px}
@@ -136,6 +144,13 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
 .newsc h3{font-size:17px;margin:6px 0 6px;line-height:1.25}
 .newsc p{color:var(--muted);font-size:14px}
 
+.sponsors{background:#050506;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:44px 0}
+.sprow{display:flex;flex-wrap:wrap;gap:34px 46px;align-items:center;justify-content:center}
+.sprow a,.sprow .sp{display:inline-flex;align-items:center;justify-content:center;height:52px;opacity:.9;transition:.15s;filter:grayscale(.15)}
+.sprow a:hover{opacity:1;filter:none;transform:translateY(-2px)}
+.sprow img{max-height:52px;max-width:170px;width:auto;height:auto;object-fit:contain;display:block}
+.sptext{font-family:var(--disp);letter-spacing:.14em;font-size:30px;color:#fff;line-height:1}
+.sptext b{color:var(--red)}
 footer{border-top:1px solid var(--line);padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
 footer .gp3logo{margin-bottom:14px}
 footer .fmeta a{color:var(--red);text-decoration:underline}
@@ -145,7 +160,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 <body>
 
 <nav><div class="wrap">
-  <a href="index.html" class="gp3logo"><span class="gp3">GP3</span><span class="cav">CCV</span></a>
+  <a href="index.html" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CCV</span></a>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="index.html">Inicio</a>
@@ -154,6 +169,7 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
     <a class="lnk" href="#ranking">Ranking 2026</a>
     <a class="lnk" href="#noticias">Noticias</a>
     <a class="lnk" href="#media">Media</a>
+    <a class="lnk" href="#sponsors">Sponsors</a>
     <a class="btn" id="liveBtn" href="#"><span class="dot"></span>EN VIVO</a>
   </div>
 </div></nav>
@@ -218,8 +234,25 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
   <div class="news" id="mediaGrid"></div>
 </div></section>
 
+<!-- ===== SPONSORS ===== -->
+<section class="sponsors" id="sponsors"><div class="wrap">
+  <div class="sechead">
+    <div class="k">Partners Oficiales</div>
+    <h2>Sponsors</h2>
+  </div>
+  <div class="sprow">
+    <a href="https://www.mobil.com" target="_blank" rel="noopener" title="Mobil">
+      <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Mobil_White.png" alt="Mobil"></a>
+    <a href="https://www.pirelli.com" target="_blank" rel="noopener" title="Pirelli">
+      <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Pirelli_Logo.png" alt="Pirelli"></a>
+    <span class="sp" title="Impovar">
+      <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Impovar_White.png" alt="Impovar"
+        onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'sptext\'>IMPO<b>VAR</b></span>')"></span>
+  </div>
+</div></section>
+
 <footer><div class="wrap">
-  <a href="index.html" class="gp3logo"><span class="gp3">GP3</span><span class="cav">CCV</span></a>
+  <a href="index.html" class="gp3logo"><span class="gp3"><span class="g">GP</span><span class="r">3</span></span><span class="cav">CCV</span></a>
   <div class="fmeta">gp3sports.lat/ccv · Campeonato Chileno de Velocidad</div>
   <div class="disc">GP3 Chile · Temporada 2026 · Chile + Argentina</div>
 </div></footer>
@@ -318,10 +351,10 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
 (function(){
   var tabsEl=document.getElementById("pilTabs"),body=document.getElementById("pilBody");
   var allCats=[];FAMILIES.forEach(function(f){f.cats.forEach(function(c){allCats.push(c);});});
-  var tabs=[{key:"__all",label:"Todas"}].concat(allCats.map(function(c){return {key:c,label:c};}));
-  tabs.forEach(function(t,i){
-    var b=el("button","tab"+(i===0?" active":""),t.label);
-    b.onclick=function(){document.querySelectorAll("#pilTabs .tab").forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderPil(t.key);};
+  // Una pestaña por categoría — cambia de "hoja" (una categoría a la vez), no se apila.
+  allCats.forEach(function(c,i){
+    var b=el("button","tab"+(i===0?" active":""),c);
+    b.onclick=function(){document.querySelectorAll("#pilTabs .tab").forEach(function(x){x.classList.remove("active");});b.classList.add("active");renderPil(c);};
     tabsEl.appendChild(b);
   });
   function catBlock(cat){
@@ -335,8 +368,8 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
     });
     wrap.appendChild(g);return wrap;
   }
-  window.renderPil=function(key){body.innerHTML="";var cats=key==="__all"?allCats:[key];cats.forEach(function(c){body.appendChild(catBlock(c));});};
-  renderPil("__all");
+  window.renderPil=function(key){body.innerHTML="";body.appendChild(catBlock(key));};
+  renderPil(allCats[0]);
 })();
 
 (function(){

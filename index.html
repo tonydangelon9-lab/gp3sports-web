@@ -135,7 +135,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
     <a class="lnk" href="#historia">Historia</a>
     <a class="lnk" href="#campeonatos">Campeonatos</a>
     <a class="lnk" href="#ecosistema">Ecosistema</a>
-    <a class="btn" href="https://panel.gp3sports.lat">Intranet</a>
+    <a class="btn js-intra" href="https://panel.gp3sports.lat">Intranet</a>
   </div>
 </div></nav>
 
@@ -245,9 +245,29 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   <div class="intra"><div class="inner">
     <h2>Intranet GP3</h2>
     <p>Acceso al material interno y a los módulos de gestión del equipo.</p>
-    <a href="https://panel.gp3sports.lat">🔒 Entrar a la Intranet</a>
+    <a class="js-intra" href="https://panel.gp3sports.lat">🔒 Entrar a la Intranet</a>
   </div></div>
 </div></section>
+
+<!-- ===== MODAL CLAVE INTRANET ===== -->
+<div id="intraModal" style="position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  background:rgba(3,4,8,.82);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);padding:20px">
+  <div style="background:#111013;border:1px solid #2c2126;border-radius:18px;max-width:360px;width:100%;
+    padding:28px 24px;text-align:center;box-shadow:0 24px 60px rgba(0,0,0,.6)">
+    <div style="font-family:'Staatliches',Arial,sans-serif;letter-spacing:.18em;color:#EB0000;font-size:13px">Acceso restringido</div>
+    <h3 style="font-family:'Staatliches',Arial,sans-serif;font-size:26px;margin:4px 0 4px;color:#fff">Intranet GP3</h3>
+    <p style="color:#b7abae;font-size:13.5px;margin:0 0 16px">Ingresá la clave de acceso del equipo.</p>
+    <input id="intraPass" type="password" inputmode="numeric" autocomplete="off" placeholder="Clave"
+      style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid #2c2126;background:#08080a;color:#fff;
+      font-size:16px;text-align:center;letter-spacing:.3em;outline:none">
+    <div id="intraErr" style="color:#ff5252;font-size:12.5px;height:16px;margin:8px 0 2px"></div>
+    <button id="intraGo" style="width:100%;padding:12px;border:none;border-radius:12px;cursor:pointer;color:#fff;
+      font-family:'Staatliches',Arial,sans-serif;letter-spacing:.08em;font-size:16px;
+      background:linear-gradient(120deg,#ff2d2d,#b00000)">Entrar</button>
+    <button id="intraCancel" style="width:100%;margin-top:8px;padding:10px;border:none;border-radius:12px;cursor:pointer;
+      color:#b7abae;background:transparent;font-size:13px">Cancelar</button>
+  </div>
+</div>
 
 <footer><div class="wrap">
   <a href="#inicio" class="brandimg"><img src="gp3-logo.png" alt="GP3 Sports LATAM" onerror="this.onerror=null;this.src='https://gp3sports.vercel.app/gp3-logo.png'"></a>
@@ -263,6 +283,29 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 (function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
   window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
     links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+})();
+/* ===== Clave de acceso Intranet ===== */
+(function(){
+  var CLAVE="1977", DEST="https://panel.gp3sports.lat";
+  var modal=document.getElementById("intraModal"),inp=document.getElementById("intraPass"),
+      err=document.getElementById("intraErr"),go=document.getElementById("intraGo"),
+      cancel=document.getElementById("intraCancel");
+  function open(){err.textContent="";inp.value="";modal.style.display="flex";setTimeout(function(){inp.focus();},60);}
+  function close(){modal.style.display="none";}
+  function check(){
+    if(inp.value.trim()===CLAVE){err.style.color="#22c55e";err.textContent="✓ Acceso correcto";
+      setTimeout(function(){window.location.href=DEST;},350);}
+    else{err.style.color="#ff5252";err.textContent="Clave incorrecta";inp.value="";inp.focus();
+      modal.firstElementChild.style.animation="none";void modal.offsetWidth;}
+  }
+  document.querySelectorAll(".js-intra").forEach(function(a){
+    a.addEventListener("click",function(e){e.preventDefault();open();});
+  });
+  go.addEventListener("click",check);
+  inp.addEventListener("keydown",function(e){if(e.key==="Enter")check();});
+  cancel.addEventListener("click",close);
+  modal.addEventListener("click",function(e){if(e.target===modal)close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.style.display==="flex")close();});
 })();
 </script>
 </body>
