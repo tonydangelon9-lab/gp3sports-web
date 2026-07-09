@@ -53,18 +53,45 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:7
   .burger{display:block}
 }
 
-.hero{background:var(--grad-dark);text-align:center;padding:74px 0 60px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 40px,rgba(235,0,0,.05) 40px 42px)}
-.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(235,0,0,.28),transparent 70%)}
-.hero .wrap{position:relative;z-index:1}
-.hero .k{font-family:var(--disp);letter-spacing:.3em;font-size:14px;color:var(--celeste)}
-.hero h1{font-family:var(--disp);font-size:clamp(46px,11vw,110px);line-height:.9;margin:8px 0}
-.hero h1 .b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .tag{font-family:var(--disp);letter-spacing:.14em;font-size:clamp(16px,3vw,24px);color:#eaf3ff}
-.hero .sub{color:#d7e6fa;font-size:clamp(15px,2.2vw,18px);max-width:640px;margin:16px auto 0}
-.hero .facts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
-.hero .fact{background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-family:var(--disp);letter-spacing:.08em;font-size:14px;color:#eaf3ff}
+/* ===== HERO CINEMATOGRÁFICO ===== */
+.hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;
+  background:linear-gradient(160deg,#0a1330 0%,#1c0a18 46%,#050506 100%)}
+.hero .fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+/* trama de líneas de velocidad (horizontales, del manual) */
+.hero .fx .grid{position:absolute;inset:-2px;
+  background:repeating-linear-gradient(0deg,transparent 0 25px,rgba(255,255,255,.04) 25px 26px);
+  -webkit-mask:radial-gradient(120% 85% at 50% 28%,#000 42%,transparent 86%);
+  mask:radial-gradient(120% 85% at 50% 28%,#000 42%,transparent 86%)}
+.hero .fx .glow{position:absolute;width:92vw;height:62vh;left:50%;top:-12%;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(235,0,0,.34),transparent 72%);filter:blur(18px);animation:pulseGlow 6s ease-in-out infinite}
+.hero .fx .glow2{position:absolute;width:64vw;height:44vh;left:12%;bottom:-18%;
+  background:radial-gradient(closest-side,rgba(20,73,155,.30),transparent 72%);filter:blur(34px)}
+@keyframes pulseGlow{0%,100%{opacity:.75}50%{opacity:1}}
+/* estelas de velocidad que cruzan */
+.hero .fx .streak{position:absolute;height:2px;border-radius:2px;left:-60vw;opacity:0;
+  background:linear-gradient(90deg,transparent,#ff3a3a 62%,#fff);animation:streak 6s linear infinite}
+.hero .fx .s1{top:24%;width:42vw;animation-duration:5.4s;animation-delay:.2s}
+.hero .fx .s2{top:52%;width:56vw;animation-duration:7s;animation-delay:2s}
+.hero .fx .s3{top:72%;width:34vw;animation-duration:6.2s;animation-delay:3.6s;background:linear-gradient(90deg,transparent,#4f8fe6 62%,#fff)}
+@keyframes streak{0%{left:-60vw;opacity:0}12%{opacity:.9}60%{opacity:.9}100%{left:122vw;opacity:0}}
+.hero .wrap{position:relative;z-index:2}
+.hero .k{font-family:var(--disp);letter-spacing:.34em;font-size:14px;color:var(--celeste);opacity:0;animation:rise .7s .05s forwards}
+.hero h1{font-family:var(--disp);font-size:clamp(56px,13vw,132px);line-height:.84;margin:12px 0 6px;letter-spacing:.01em;opacity:0;animation:rise .8s .12s forwards}
+.hero h1 .b{background:linear-gradient(120deg,#ff2d2d,#8f0000);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .tag{font-family:var(--disp);letter-spacing:.16em;font-size:clamp(16px,3.4vw,28px);color:#fff;opacity:0;animation:rise .8s .2s forwards}
+.hero .tag .rojo{color:var(--red)}
+.hero .sub{color:#c9d3e6;font-size:clamp(15px,2.2vw,18px);max-width:650px;margin:18px auto 0;opacity:0;animation:rise .8s .3s forwards}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px;opacity:0;animation:rise .8s .4s forwards}
+.hero .cta a{font-family:var(--disp);letter-spacing:.08em;font-size:15px;padding:13px 26px;border-radius:999px;cursor:pointer;transition:.15s}
+.hero .cta .primary{background:linear-gradient(120deg,#ff2d2d,#b00000);color:#fff;box-shadow:0 10px 30px rgba(235,0,0,.28)}
+.hero .cta .primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(235,0,0,.4)}
+.hero .cta .ghost{border:1px solid rgba(255,255,255,.28);color:#fff}
+.hero .cta .ghost:hover{border-color:var(--red);color:#fff}
+.hero .facts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px;opacity:0;animation:rise .8s .5s forwards}
+.hero .fact{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-family:var(--disp);letter-spacing:.08em;font-size:14px;color:#eaf3ff;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
 .hero .fact b{color:var(--celeste)}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.hero .k,.hero h1,.hero .tag,.hero .sub,.hero .cta,.hero .facts{animation:none;opacity:1}.hero .fx .streak,.hero .fx .glow{animation:none}}
 
 .sec{padding:60px 0}
 .sec.alt{background:var(--surface)}
@@ -142,17 +169,27 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></nav>
 
 <!-- ===== INICIO ===== -->
-<header class="hero" id="inicio"><div class="wrap">
-  <div class="k">Est. 2007</div>
-  <h1><span class="b">GP3</span> Sports</h1>
-  <div class="tag">18 años acelerando a fondo</div>
-  <p class="sub">Formamos pilotos latinoamericanos y los conectamos con los grandes campeonatos del mundo. De Chile a Europa, el camino al MotoGP empieza acá.</p>
-  <div class="facts">
-    <div class="fact">Fundada en <b>2007</b></div>
-    <div class="fact">Base en <b>Chile</b></div>
-    <div class="fact">Latinoamérica <b>&</b> Europa</div>
+<header class="hero" id="inicio">
+  <div class="fx" aria-hidden="true">
+    <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
+    <span class="streak s1"></span><span class="streak s2"></span><span class="streak s3"></span>
   </div>
-</div></header>
+  <div class="wrap">
+    <div class="k">Est. 2007 · GP3 Sports LATAM</div>
+    <h1><span class="b">GP3</span> SPORTS</h1>
+    <div class="tag">18 AÑOS ACELERANDO <span class="rojo">A FONDO</span></div>
+    <p class="sub">Formamos pilotos latinoamericanos y los conectamos con los grandes campeonatos del mundo. De Chile a Europa, el camino al MotoGP empieza acá.</p>
+    <div class="cta">
+      <a class="primary" href="#campeonatos">Ver campeonatos</a>
+      <a class="ghost js-intra" href="https://panel.gp3sports.lat">Intranet</a>
+    </div>
+    <div class="facts">
+      <div class="fact">Fundada en <b>2007</b></div>
+      <div class="fact">Base en <b>Chile</b></div>
+      <div class="fact">Latinoamérica <b>&</b> Europa</div>
+    </div>
+  </div>
+</header>
 
 <!-- ===== HISTORIA ===== -->
 <section class="sec" id="historia"><div class="wrap">
