@@ -31,6 +31,7 @@ section{scroll-margin-top:90px}
 .gp3logo .gp3{font-size:30px;font-style:italic;transform:skewX(-8deg);background:linear-gradient(120deg,#ff3030,#b30000);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gp3logo .sp{font-size:13px;letter-spacing:.2em;color:#EB0000;border-left:2px solid #EB0000;padding-left:8px}
 .brandimg{display:inline-flex;align-items:center}
+/* logo fallback text si la imagen no carga */
 .brandimg img{height:46px;display:block;width:auto}
 footer .brandimg{justify-content:center}
 footer .brandimg img{height:62px;margin:0 auto 14px}
@@ -127,14 +128,14 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 <body>
 
 <nav><div class="wrap">
-  <a href="#inicio" class="brandimg"><img src="https://gp3sports.lat/gp3-logo.png" alt="GP3 Sports LATAM"></a>
+  <a href="#inicio" class="brandimg"><img src="gp3-logo.png" alt="GP3 Sports LATAM" onerror="this.onerror=null;this.src='https://gp3sports.vercel.app/gp3-logo.png'"></a>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="#inicio">Inicio</a>
     <a class="lnk" href="#historia">Historia</a>
     <a class="lnk" href="#campeonatos">Campeonatos</a>
     <a class="lnk" href="#ecosistema">Ecosistema</a>
-    <a class="btn" href="intranet/">Intranet</a>
+    <a class="btn" href="https://panel.gp3sports.lat">Intranet</a>
   </div>
 </div></nav>
 
@@ -244,12 +245,12 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   <div class="intra"><div class="inner">
     <h2>Intranet GP3</h2>
     <p>Acceso al material interno y a los módulos de gestión del equipo.</p>
-    <a href="intranet/">🔒 Entrar a la Intranet</a>
+    <a href="https://panel.gp3sports.lat">🔒 Entrar a la Intranet</a>
   </div></div>
 </div></section>
 
 <footer><div class="wrap">
-  <a href="#inicio" class="brandimg"><img src="https://gp3sports.lat/gp3-logo.png" alt="GP3 Sports LATAM"></a>
+  <a href="#inicio" class="brandimg"><img src="gp3-logo.png" alt="GP3 Sports LATAM" onerror="this.onerror=null;this.src='https://gp3sports.vercel.app/gp3-logo.png'"></a>
   <div class="fmeta">gp3sports.lat · Formación de pilotos rumbo al MotoGP</div>
   <div class="disc">GP3 Sports © 2007–2026 · Chile · Latinoamérica · Europa</div>
 </div></footer>
