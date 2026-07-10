@@ -35,6 +35,10 @@ section{scroll-margin-top:90px}
 .gp3logo .gp3{font-size:30px;letter-spacing:.02em;font-style:italic;transform:skewX(-8deg);
   background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gp3logo .cav{font-size:13px;letter-spacing:.24em;color:var(--celeste);border-left:2px solid var(--celeste);padding-left:7px}
+.navleft{display:inline-flex;align-items:center;gap:12px}
+.backhome{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;
+  border:1px solid var(--line);color:var(--muted);font-size:20px;line-height:1;transition:.15s}
+.backhome:hover{color:#fff;border-color:var(--celeste);background:rgba(108,172,228,.12)}
 
 /* ===== NAV ===== */
 nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.82);position:sticky;top:0;z-index:40;
@@ -194,7 +198,10 @@ footer .disc{margin-top:10px;font-size:11px;opacity:.7}
 <body>
 
 <nav><div class="wrap">
-  <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w400" alt="GP3 · CAV"></a>
+  <div class="navleft">
+    <a href="https://gp3sports.lat" class="backhome" title="Volver a GP3 Sports" aria-label="Volver a GP3 Sports">&#8592;</a>
+    <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://drive.google.com/thumbnail?id=17JWVnY2D0ytDrCWO9W9gjD-0tq9Imbfe&sz=w400" alt="GP3 · CAV"></a>
+  </div>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="#inicio">Inicio</a>
