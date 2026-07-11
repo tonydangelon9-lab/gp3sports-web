@@ -196,6 +196,19 @@ footer .gp3logo{margin-bottom:14px}
 footer .fmeta a{color:var(--celeste);text-decoration:underline}
 footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','785514300908437');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -425,6 +438,16 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   cancel.addEventListener("click",close);
   modal.addEventListener("click",function(e){if(e.target===modal)close();});
   document.addEventListener("keydown",function(e){if(e.key==="Escape"&&modal.style.display==="flex")close();});
+})();
+</script>
+<script>
+/* Meta Pixel — eventos de navegacion y conversion */
+(function(){
+  window.addEventListener("hashchange",function(){ if(window.fbq) fbq("track","PageView"); });
+  document.addEventListener("click",function(e){
+    var a=e.target.closest && e.target.closest('a[href*="panel.gp3sports.lat"]');
+    if(a && window.fbq && /entrada/i.test(a.textContent||"")) fbq("track","InitiateCheckout");
+  });
 })();
 </script>
 </body>
