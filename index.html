@@ -32,26 +32,37 @@ a{color:inherit;text-decoration:none}
 section{scroll-margin-top:90px}
 /* ===== VISTAS (páginas) — cada sección es una hoja ===== */
 [data-view]{display:none}
+[data-view].show{display:block}
+.hero.show{display:flex}
 
 .gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
 .gp3logo .gp3{font-size:30px;font-style:italic;transform:skewX(-8deg);background:linear-gradient(120deg,#ff3030,#b30000);-webkit-background-clip:text;background-clip:text;color:transparent}
 .gp3logo .sp{font-size:13px;letter-spacing:.2em;color:#EB0000;border-left:2px solid #EB0000;padding-left:8px}
 /* ===== LOGO GP3 (imagen, fondo transparente vía blend) ===== */
 .brandimg{display:inline-flex;align-items:center}
-.brandimg img{height:88px;width:auto;display:block;mix-blend-mode:screen}
+.brandimg img{height:102px;width:auto;display:block;mix-blend-mode:screen}
 footer .brandimg{justify-content:center;margin:0 auto 14px}
-footer .brandimg img{height:104px;mix-blend-mode:screen}
-@media(max-width:640px){.brandimg img{height:66px}}
+footer .brandimg img{height:120px;mix-blend-mode:screen}
+@media(max-width:640px){.brandimg img{height:74px}}
 
-nav{border-bottom:1px solid var(--line);background:#05070d;position:sticky;top:0;z-index:40}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:96px;gap:18px}
+/* textura fibra de carbono */
+nav,footer{background:
+  linear-gradient(27deg,#15161a 5px,transparent 5px) 0 5px,
+  linear-gradient(207deg,#15161a 5px,transparent 5px) 10px 0,
+  linear-gradient(27deg,#1c1d22 5px,transparent 5px) 0 10px,
+  linear-gradient(207deg,#1c1d22 5px,transparent 5px) 10px 5px,
+  linear-gradient(90deg,#171820 11px,transparent 11px),
+  linear-gradient(#191a20 25%,#141519 25%,#141519 50%,transparent 50%,transparent 75%,#1e1f26 75%,#1e1f26);
+  background-color:#101012;background-size:20px 20px}
+nav{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:110px;gap:18px}
 .navlinks{display:flex;gap:16px;align-items:center}
 .navlinks a.lnk{font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:var(--muted);white-space:nowrap}
 .navlinks a.lnk:hover,.navlinks a.lnk.active{color:#fff}
 .navlinks .btn{font-family:var(--disp);letter-spacing:.06em;font-size:15px;color:#fff;background:var(--grad);border-radius:999px;padding:8px 18px}
 .burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
 @media(max-width:980px){
-  .navlinks{position:fixed;inset:96px 0 auto 0;background:rgba(5,7,13,.98);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:10px 0;transform:translateY(-140%);transition:transform .25s;z-index:39}
+  .navlinks{position:fixed;inset:110px 0 auto 0;background:rgba(5,7,13,.98);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:10px 0;transform:translateY(-140%);transition:transform .25s;z-index:39}
   .navlinks.open{transform:translateY(0)}
   .navlinks a.lnk{padding:15px 22px;width:100%;text-align:center;font-size:19px}
   .navlinks .btn{margin:12px auto}
@@ -59,7 +70,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:9
 }
 
 /* ===== HERO CINEMATOGRÁFICO ===== */
-.hero{position:relative;overflow:hidden;text-align:center;padding:120px 0 96px;
+.hero{position:relative;overflow:hidden;text-align:center;min-height:calc(100vh - 110px);
+  align-items:center;justify-content:center;padding:26px 0;
   background:linear-gradient(160deg,#0a1330 0%,#1c0a18 46%,#050506 100%)}
 .hero .fx{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
 /* trama de líneas de velocidad (horizontales, del manual) */
@@ -333,7 +345,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   var navlinks=document.querySelectorAll(".navlinks a.lnk");
   function show(id){
     if(ids.indexOf(id)<0)id="inicio";
-    els.forEach(function(e){e.style.display=e.getAttribute("data-view")===id?"block":"none";});
+    els.forEach(function(e){e.classList.toggle("show",e.getAttribute("data-view")===id);});
     navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id);});
     window.scrollTo(0,0);
   }
