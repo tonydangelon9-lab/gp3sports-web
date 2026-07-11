@@ -57,8 +57,8 @@ nav,footer{background:
   background-color:#101012;background-size:20px 20px}
 nav{position:sticky;top:0;z-index:40;overflow:hidden}
 /* el carbono se funde en degradé hacia el color del hero */
-nav::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(10,19,48,.55) 78%,#0a1330 100%);pointer-events:none;z-index:0}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:110px;gap:18px;position:relative;z-index:1}
+nav::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(10,19,48,.55) 78%,#0a1330 100%);pointer-events:none;z-index:-1}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:110px;gap:18px}
 .navlinks{display:flex;gap:16px;align-items:center}
 .navlinks a.lnk{font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:var(--muted);white-space:nowrap}
 .navlinks a.lnk:hover,.navlinks a.lnk.active{color:#fff}
@@ -169,8 +169,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:1
 .intra a{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:#fff;background:var(--grad);border-radius:999px;padding:12px 26px}
 
 footer{position:relative;overflow:hidden;padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
-footer::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;background:linear-gradient(0deg,transparent 40%,rgba(5,7,13,.85) 85%,#05070d 100%);pointer-events:none;z-index:0}
-footer .wrap{position:relative;z-index:1}
+footer::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;background:linear-gradient(0deg,transparent 40%,rgba(5,7,13,.85) 85%,#05070d 100%);pointer-events:none;z-index:-1}
 footer .gp3logo{margin-bottom:14px}
 footer .fmeta a{color:var(--celeste);text-decoration:underline}
 footer .disc{margin-top:8px;font-size:11px;opacity:.7}
