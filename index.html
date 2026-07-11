@@ -195,6 +195,14 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;back
 footer .gp3logo{margin-bottom:14px}
 footer .fmeta a{color:var(--celeste);text-decoration:underline}
 footer .disc{margin-top:8px;font-size:11px;opacity:.7}
+
+/* ===== BOTON FLOTANTE DE WHATSAPP ===== */
+#wa{position:fixed;right:18px;bottom:18px;z-index:9999;width:58px;height:58px;border-radius:50%;
+background:#25D366;display:flex;align-items:center;justify-content:center;
+box-shadow:0 8px 26px rgba(0,0,0,.45);transition:transform .18s ease}
+#wa:hover{transform:scale(1.08)}
+#wa svg{width:31px;height:31px;fill:#fff}
+@media(max-width:560px){#wa{width:52px;height:52px;right:14px;bottom:14px}#wa svg{width:28px;height:28px}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -385,7 +393,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 <footer><div class="wrap">
   <a href="#inicio" class="brandimg" aria-label="GP3 Sports LATAM"><img src="https://drive.google.com/thumbnail?id=108-b0h45JsWtS4JlwHDUDwHQi_Bh58-v&sz=w400" alt="GP3 Sports LATAM"></a>
   <div class="social"><a href="https://www.instagram.com/gp3.sports.latam/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.25.64.42 1.36.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.79-.47 2.43a4.9 4.9 0 01-1.15 1.77 4.9 4.9 0 01-1.77 1.15c-.64.25-1.36.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.64-.42-1.36-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.79.47-2.43a4.9 4.9 0 011.15-1.77A4.9 4.9 0 015.45 2.53c.64-.25 1.36-.42 2.43-.47C8.94 2.01 9.28 2 12 2m0 5a5 5 0 100 10 5 5 0 000-10m0 1.8a3.2 3.2 0 110 6.4 3.2 3.2 0 010-6.4m5.25-3.15a1.15 1.15 0 100 2.3 1.15 1.15 0 000-2.3"/></svg></a><a href="https://www.facebook.com/Categoria300/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5H17V3.6c-.29-.04-1.27-.13-2.4-.13-2.38 0-4 1.45-4 4.12v2.28H8v3.1h2.6V21z"/></svg></a><a href="https://www.youtube.com/@gp3sportstv860" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5 31 31 0 00.9 12 31 31 0 001 16.5a3 3 0 002.1 2.1C5 19 12 19 12 19s7 0 8.9-.4a3 3 0 002.1-2.1 31 31 0 00.1-4.5 31 31 0 00-.1-4.5M10 15.5v-7l6 3.5z"/></svg></a><a href="https://www.tiktok.com/@gp3.sports" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.6 5.8a4.3 4.3 0 01-2.6-3.8h-3v12.9a2.6 2.6 0 11-2.6-2.6c.27 0 .53.04.78.12V9.3a5.7 5.7 0 105 5.66V9.2a7.3 7.3 0 004.3 1.4V7.5a4.3 4.3 0 01-1.88-1.7"/></svg></a><a href="https://www.linkedin.com/company/gp3-sport-latam" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M6.9 8.4H3.6V21h3.3zM5.25 3a1.9 1.9 0 100 3.8 1.9 1.9 0 000-3.8M20.4 21v-6.9c0-3.7-2-5.4-4.6-5.4a4 4 0 00-3.6 2V8.4H9v12.6h3.3v-6.7c0-1.75.33-3.44 2.5-3.44 2.14 0 2.17 2 2.17 3.55V21z"/></svg></a></div>
-  <div class="fmeta">gp3sports.lat · Formación de pilotos rumbo al MotoGP</div>
+  <div class="fmeta">gp3sports.lat · Formación de pilotos rumbo al MotoGP<br><a href="mailto:inscripcion@gp3chile.cl" style="color:inherit;text-decoration:underline">inscripcion@gp3chile.cl</a> · <a href="https://wa.me/56952116037" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">+56 9 5211 6037</a></div>
   <div class="disc">GP3 Sports © 2007–2026 · Chile · Latinoamérica · Europa</div>
 </div></footer>
 
@@ -450,5 +458,6 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
   });
 })();
 </script>
+<a id="wa" href="https://wa.me/56952116037?text=Hola%21%20Quiero%20info%20de%20GP3%20Sports%20LATAM." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35z"/><path d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2 22l5.35-1.4a9.8 9.8 0 0 0 4.69 1.2h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 19 4.9 9.79 9.79 0 0 0 12.04 2zm0 17.96h-.01a8.2 8.2 0 0 1-4.17-1.14l-.3-.18-3.1.81.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.34c0-4.52 3.68-8.2 8.2-8.2a8.15 8.15 0 0 1 8.19 8.21c0 4.52-3.68 8.17-8.19 8.17z"/></svg></a>
 </body>
 </html>
