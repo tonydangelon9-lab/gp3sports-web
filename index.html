@@ -9,6 +9,14 @@
 <meta name="description" content="GP3 Sports — formación de pilotos latinoamericanos rumbo al MotoGP. Campeonatos CCV, CAV y Moto4 Latin Cup. Fundada en 2007.">
 <meta property="og:title" content="GP3 Sports">
 <meta property="og:description" content="18 años acelerando a fondo. El puente entre el motociclismo latinoamericano y el mundo.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gp3sports.lat/">
+<meta property="og:image" content="https://gp3sports.vercel.app/gp3-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GP3 Sports · 18 años acelerando a fondo">
+<meta name="twitter:description" content="Formación de pilotos latinoamericanos rumbo al MotoGP. CCV, CAV y Moto4 Latin Cup.">
+<meta name="twitter:image" content="https://gp3sports.vercel.app/gp3-logo.png">
+<link rel="canonical" href="https://gp3sports.lat/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
@@ -168,6 +176,16 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:1
 .intra p{color:#cfe0f4;margin:8px auto 18px;max-width:520px}
 .intra a{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);letter-spacing:.06em;font-size:16px;color:#fff;background:var(--grad);border-radius:999px;padding:12px 26px}
 
+/* ===== SPONSORS ===== */
+.sponsors{background:#050506;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:42px 0}
+.sponsors .sechead{margin-bottom:22px}
+.sprow{display:flex;flex-wrap:wrap;gap:30px 46px;align-items:center;justify-content:center}
+.sprow a,.sprow .sp{display:inline-flex;align-items:center;justify-content:center;height:50px;opacity:.9;transition:.15s;filter:grayscale(.15)}
+.sprow a:hover{opacity:1;filter:none;transform:translateY(-2px)}
+.sprow img{max-height:50px;max-width:170px;width:auto;height:auto;object-fit:contain;display:block}
+.sptext{font-family:var(--disp);letter-spacing:.14em;font-size:28px;color:#fff;line-height:1}
+.sptext b{color:var(--red)}
+body.home-inicio .sponsors{display:none}
 footer{position:relative;overflow:hidden;padding:40px 0 30px;text-align:center;color:var(--muted);font-size:13px}
 footer::before{content:"";position:absolute;left:0;right:0;top:0;height:60%;background:linear-gradient(0deg,transparent 40%,rgba(5,7,13,.85) 85%,#05070d 100%);pointer-events:none;z-index:-1}
 footer .gp3logo{margin-bottom:14px}
@@ -330,6 +348,22 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
       color:#b7abae;background:transparent;font-size:13px">Cancelar</button>
   </div>
 </div>
+
+<!-- ===== SPONSORS ===== -->
+<section class="sponsors">
+  <div class="wrap">
+    <div class="sechead"><div class="k">Partners Oficiales</div><h2>Sponsors</h2></div>
+    <div class="sprow">
+      <a href="https://www.mobil.com" target="_blank" rel="noopener" title="Mobil">
+        <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Mobil_White.png" alt="Mobil"></a>
+      <a href="https://www.pirelli.com" target="_blank" rel="noopener" title="Pirelli">
+        <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Pirelli_Logo.png" alt="Pirelli"></a>
+      <span class="sp" title="Impovar">
+        <img src="https://www.moto4latincup.lat/07-LOGOS-SPONSORS/Impovar_White.png" alt="Impovar"
+          onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span class=\'sptext\'>IMPO<b>VAR</b></span>')"></span>
+    </div>
+  </div>
+</section>
 
 <footer><div class="wrap">
   <a href="#inicio" class="brandimg" aria-label="GP3 Sports LATAM"><img src="https://drive.google.com/thumbnail?id=108-b0h45JsWtS4JlwHDUDwHQi_Bh58-v&sz=w400" alt="GP3 Sports LATAM"></a>
