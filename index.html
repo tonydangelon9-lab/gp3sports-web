@@ -34,6 +34,7 @@ section{scroll-margin-top:90px}
 [data-view]{display:none}
 [data-view].show{display:block}
 .hero.show{display:flex}
+body.home-inicio footer{display:none}
 
 .gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
 .gp3logo .gp3{font-size:30px;font-style:italic;transform:skewX(-8deg);background:linear-gradient(120deg,#ff3030,#b30000);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -346,6 +347,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   function show(id){
     if(ids.indexOf(id)<0)id="inicio";
     els.forEach(function(e){e.classList.toggle("show",e.getAttribute("data-view")===id);});
+    document.body.classList.toggle("home-inicio",id==="inicio");
     navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id);});
     window.scrollTo(0,0);
   }
