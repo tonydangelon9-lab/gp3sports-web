@@ -30,6 +30,8 @@ body{background:var(--bg);color:var(--white);font-family:var(--body);line-height
 .wrap{max-width:1180px;margin:0 auto;padding:0 18px}
 a{color:inherit;text-decoration:none}
 section{scroll-margin-top:90px}
+/* ===== VISTAS (páginas) — cada sección es una hoja ===== */
+[data-view]{display:none}
 
 .gp3logo{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);line-height:.9}
 .gp3logo .gp3{font-size:30px;font-style:italic;transform:skewX(-8deg);background:linear-gradient(120deg,#ff3030,#b30000);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -175,7 +177,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></nav>
 
 <!-- ===== INICIO ===== -->
-<header class="hero" id="inicio">
+<header class="hero" id="inicio" data-view="inicio">
   <div class="fx" aria-hidden="true">
     <div class="grid"></div><div class="glow"></div><div class="glow2"></div>
     <span class="streak s1"></span><span class="streak s2"></span><span class="streak s3"></span>
@@ -198,7 +200,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </header>
 
 <!-- ===== HISTORIA ===== -->
-<section class="sec" id="historia"><div class="wrap">
+<section class="sec" id="historia" data-view="historia"><div class="wrap">
   <div class="sechead">
     <div class="k">Quiénes somos</div>
     <h2>Nuestra Historia</h2>
@@ -220,7 +222,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== MISIÓN Y VISIÓN ===== -->
-<section class="sec alt"><div class="wrap">
+<section class="sec alt" data-view="historia"><div class="wrap">
   <div class="sechead"><div class="k">Nuestro norte</div><h2>Misión y Visión</h2></div>
   <div class="mv">
     <div class="mvc">
@@ -235,7 +237,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== TRES CUADROS / CAMPEONATOS ===== -->
-<section class="sec" id="campeonatos"><div class="wrap">
+<section class="sec" id="campeonatos" data-view="campeonatos"><div class="wrap">
   <div class="sechead">
     <div class="k">Nuestros campeonatos</div>
     <h2>Elegí tu pista</h2>
@@ -273,7 +275,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== ECOSISTEMA ===== -->
-<section class="sec alt" id="ecosistema"><div class="wrap">
+<section class="sec alt" id="ecosistema" data-view="ecosistema"><div class="wrap">
   <div class="sechead">
     <div class="k">Más que campeonatos</div>
     <h2>El Ecosistema GP3</h2>
@@ -288,7 +290,7 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
 </div></section>
 
 <!-- ===== INTRANET ===== -->
-<section class="sec"><div class="wrap">
+<section class="sec" data-view="ecosistema"><div class="wrap">
   <div class="intra"><div class="inner">
     <h2>Intranet GP3</h2>
     <p>Acceso al material interno y a los módulos de gestión del equipo.</p>
@@ -327,9 +329,26 @@ footer .disc{margin-top:8px;font-size:11px;opacity:.7}
   if(b){b.addEventListener("click",function(){m.classList.toggle("open");});
     m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");});});}
 })();
-(function(){var links=document.querySelectorAll(".navlinks a.lnk");var secs=[].map.call(links,function(a){return document.querySelector(a.getAttribute("href"));});
-  window.addEventListener("scroll",function(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i;});
-    links.forEach(function(a){a.classList.remove("active");});if(links[cur])links[cur].classList.add("active");});
+/* Router: cada sección es una "página" (vista), no scroll */
+(function(){
+  var els=[].slice.call(document.querySelectorAll("[data-view]"));
+  var ids=els.map(function(e){return e.getAttribute("data-view");});
+  var navlinks=document.querySelectorAll(".navlinks a.lnk");
+  function show(id){
+    if(ids.indexOf(id)<0)id="inicio";
+    els.forEach(function(e){e.style.display=e.getAttribute("data-view")===id?"block":"none";});
+    navlinks.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+id);});
+    window.scrollTo(0,0);
+  }
+  document.addEventListener("click",function(e){
+    var a=e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute("href").slice(1);
+    if(ids.indexOf(id)>=0){e.preventDefault();
+      if(location.hash!=="#"+id){location.hash=id;}else{show(id);}
+      var m=document.getElementById("menu");if(m)m.classList.remove("open");}
+  });
+  window.addEventListener("hashchange",function(){show(location.hash.slice(1)||"inicio");});
+  show(location.hash.slice(1)||"inicio");
 })();
 /* ===== Clave de acceso Intranet ===== */
 (function(){
