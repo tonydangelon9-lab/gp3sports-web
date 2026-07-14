@@ -24,11 +24,11 @@
 <link rel="apple-touch-icon" href="https://gp3sports.vercel.app/gp3-logo.png">
 <style>
 :root{
-  --red:#EB0000; --celeste:#EB0000; --blue:#14499B; --blue-deep:#0a2547; --sky:#8fc4f2;
-  --white:#fff; --bg:#05070d; --surface:#0b1220; --surface2:#141824; --line:#2a1d2a;
-  --muted:#c2b0b6; --gold:#facc15;
-  --grad:linear-gradient(120deg,var(--blue),var(--celeste));
-  --grad-dark:linear-gradient(160deg,#0a1f47 0%,#3a0d15 60%,#05070d 100%);
+  --red:#E8001D; --celeste:#E8001D; --blue:#0a0a0f; --blue-deep:#0a0a0f; --sky:#5c5c66;
+  --white:#fff; --bg:#ffffff; --surface:#ffffff; --surface2:#f6f6f8; --line:#e4e4e8;
+  --muted:#5c5c66; --gold:#facc15;
+  --grad:linear-gradient(120deg,#E8001D,#b00014);
+  --grad-dark:linear-gradient(160deg,#ffffff 0%,#f6f6f8 100%);
   --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
   --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
@@ -203,6 +203,68 @@ box-shadow:0 8px 26px rgba(0,0,0,.45);transition:transform .18s ease}
 #wa:hover{transform:scale(1.08)}
 #wa svg{width:31px;height:31px;fill:#fff}
 @media(max-width:560px){#wa{width:52px;height:52px;right:14px;bottom:14px}#wa svg{width:28px;height:28px}}
+
+/* ══════════════════════════════════════════════════════════════
+   IDENTIDAD GP3 SPORTS LATAM — blanco + rojo + líneas negras
+   El logo define la marca: negro y rojo sobre blanco.
+   ══════════════════════════════════════════════════════════════ */
+body{background:#fff;color:#0a0a0f}
+.hero,section,.sec{background:#fff}
+h1,h2,h3,h4{color:#0a0a0f}
+p,li,.sub{color:#4a4a55}
+b,strong{color:#0a0a0f}
+.sechead .k,.hero .k{color:#E8001D}
+
+/* trama de velocidad del brandbook, en negro sutil */
+.hero .fx .grid{background:repeating-linear-gradient(0deg,transparent 0 24px,rgba(10,10,15,.06) 24px 25px)}
+.hero .fx .glow,.hero .fx .glow2,.hero .fx .streak{display:none}
+
+/* nav: blanco con línea negra. El logo real (fondo blanco) se integra solo. */
+nav{background:#fff;border-bottom:2px solid #0a0a0f;overflow:visible}
+nav::before{display:none}
+.navlinks a.lnk{color:#4a4a55}
+.navlinks a.lnk:hover,.navlinks a.lnk.active{color:#E8001D}
+.navlinks .btn{background:#E8001D;color:#fff}
+
+/* hero */
+.hero .tag{color:#0a0a0f}
+.hero .tag .rojo{color:#E8001D}
+.hero .facts .fact{color:#0a0a0f;background:#fafafb;border:1px solid #e4e4e8}
+.hero .facts .fact b{color:#E8001D}
+.hero .cta a.primary{background:#E8001D;color:#fff}
+.hero .cta a.ghost{color:#0a0a0f;border:1px solid #0a0a0f;background:transparent}
+
+/* historia */
+.tl .txt{color:#4a4a55}
+.tl .yr{color:#E8001D}
+.timeline .tl .dot{background:#E8001D}
+.mv .mvc{background:#fff;border:1px solid #e4e4e8}
+.mv .mvc h3,.mv .mvc h4{color:#0a0a0f}
+
+/* campeonatos */
+.brands a.brand{background:#fff;border:1px solid #e4e4e8}
+.brands .bdesc{color:#5c5c66}
+.brands .go{color:#E8001D}
+.brands h3,.brands h4{color:#0a0a0f}
+
+/* ecosistema */
+.ecoc{background:#fff;border:1px solid #e4e4e8;border-top:3px solid #E8001D}
+.ecoc h4{color:#0a0a0f}
+.ecoc p{color:#5c5c66}
+
+/* SPONSORS: franja negra a propósito — sus logos son versión blanca
+   (Mobil_White, Impovar_White) y sobre fondo claro desaparecen. */
+.sponsors{background:#0a0a0f;border-top:2px solid #E8001D}
+.sponsors,.sponsors *{color:#e8e8ee}
+.sponsors h2{color:#fff}
+
+footer{background:#0a0a0f}
+footer,footer *{color:#b9b9c2}
+
+/* modal Intranet: superficie oscura -> texto claro */
+#intraModal h1,#intraModal h2,#intraModal h3,#intraModal h4{color:#fff}
+#intraModal p,#intraModal div,#intraModal span,#intraModal label{color:#c9c9d2}
+#intraModal input{background:#1c1c22;color:#fff;border:1px solid #33333d}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -221,7 +283,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 <body>
 
 <nav><div class="wrap">
-  <a href="#inicio" class="brandimg" aria-label="GP3 Sports LATAM"><img src="https://lh3.googleusercontent.com/d/108-b0h45JsWtS4JlwHDUDwHQi_Bh58-v=w400" alt="GP3 Sports LATAM"></a>
+  <a href="#inicio" class="brandimg" aria-label="GP3 Sports LATAM"><img src="/gp3-logo.png" alt="GP3 Sports LATAM" style="height:56px;width:auto;object-fit:contain;display:block"></a>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
   <div class="navlinks" id="menu">
     <a class="lnk" href="#inicio">Inicio</a>
