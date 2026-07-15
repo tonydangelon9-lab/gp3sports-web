@@ -253,7 +253,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 
 <nav><div class="wrap">
   <div class="navleft">
-    <a href="https://gp3sports.lat" class="backhome" title="Volver a GP3 Sports" aria-label="Volver a GP3 Sports">&#8592;</a>
+    <a href="https://gp3sports.lat" class="backhome" title="Volver" aria-label="Volver" onclick="if(history.length>1){history.back();return false}">&#8592;</a>
     <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://gp3-neumaticos.vercel.app/cav-logo.png" alt="GP3 · CAV"></a>
   </div>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
@@ -271,6 +271,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 
 <!-- ===== INICIO ===== -->
 <header class="hero view show" id="inicio"><div class="wrap">
+  <img src="https://gp3-neumaticos.vercel.app/cav-logo.png" alt="CAV · Campeonato Argentino de Velocidad" style="height:84px;width:auto;display:block;margin:0 auto 16px;object-fit:contain;background:#fff;border-radius:12px;padding:8px 14px;box-sizing:content-box" onerror="this.style.display='none'">
   <div class="k">GP3 Argentina</div>
   <h1>Campeonato<br><span class="b">Argentino</span> de Velocidad</h1>
   <p class="sub">¿Estás listo para vivir la velocidad al límite?</p>
@@ -500,7 +501,7 @@ function el(t,c,h){var e=document.createElement(t);if(c)e.className=c;if(h!=null
 });})();
 
 /* Avatar (número o foto). Si falla la foto, cae al número. */
-window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+num+'</span>';};
+window.avImgErr=function(img,num){var n=+(img.dataset.r||0);if(n<3){img.dataset.r=n+1;setTimeout(function(){img.src=img.src.split('?cb=')[0]+'?cb='+Date.now();},900*(n+1));}else{img.parentNode.innerHTML='<span class="num">'+num+'</span>';}};
 var PHOTOS={"jose maria plaja":"https://lh3.googleusercontent.com/d/1Dlt7yTmisBzMHBNL4FMJR50rkPnUzads=w400","mariano villalobos":"https://lh3.googleusercontent.com/d/1n_t7aiTN7K4-_OaTGikh5Y6hc8wLf3mV=w400","federico marquez":"https://lh3.googleusercontent.com/d/1tkhL4tOGsxn-QDkL969YFAWJ2YLMVOf9=w400","ariel gabarini":"https://lh3.googleusercontent.com/d/10MWmdpc-5D7FnFiZwE6vyfg5HkkX-IRl=w400","augusto caviglia":"https://lh3.googleusercontent.com/d/1zDrB1WuQdjuX1z1LJXBXiLtF3oVwlFTY=w400","jose ignacio sartor":"https://lh3.googleusercontent.com/d/1zU6YMfWPJ0Yo7vqt5OjKDBcKsRsykpNW=w400","lucas brizuela":"https://lh3.googleusercontent.com/d/17wTKKgkKJ-2J1GZejXNeYs0mht6ZdCdp=w400","javier alvarez":"https://lh3.googleusercontent.com/d/1zChLzIf_5VHhjSU7mgOmqdGPjbe1n78J=w400","manuel barrionuevo":"https://lh3.googleusercontent.com/d/1C_UyyHSib_dJ5MMQHDK-LreYtSWlirxY=w400","facundo romero":"https://lh3.googleusercontent.com/d/1CuQRx5f0vZdS6CeQz6UegVeGCoFfQeOu=w400","pablo tarantino":"https://lh3.googleusercontent.com/d/1Jd97qBttbkLApBuq0V4gkmUgnJzntFd4=w400","juan solorza":"https://lh3.googleusercontent.com/d/1T4EIQite12y2HOm3PversJYzTZtu_4gn=w400","claudio lopez":"https://lh3.googleusercontent.com/d/1bDFbDZVbXFgKUsSdRIn7gl0nPnrtHSFs=w400","mateo bongiovanni":"https://lh3.googleusercontent.com/d/18h_DsGzL6lTICHlzf76BfiCc25H3gWY1=w400","maximiliano rocha":"https://lh3.googleusercontent.com/d/1nNz5K84ZJMmIcNwzvY5tjgyJKMQ_x2Zm=w400","tomas cassano":"https://lh3.googleusercontent.com/d/1XkVYdUlU9JHBukcKnjw0Mcaadhgc3moU=w400","maximiliano fontecilla":"https://lh3.googleusercontent.com/d/1px5JE41ClaOdzJ6ZZnx_AhyHDeMdyPaA=w400","alberto auad cavallotti":"https://lh3.googleusercontent.com/d/1v73-IUcSd9_pLUAS02kCAzkxnepGA9EH=w400","pablo gamberini":"https://lh3.googleusercontent.com/d/1Pb46FzSgM_1_Lk_Ttr0gXdrGoFQ64UGG=w400","francisco velez":"https://lh3.googleusercontent.com/d/1OEP14tLkotjvM1UAmeeEvpjhsk2CUeor=w400","felipe gini":"https://lh3.googleusercontent.com/d/178C9OmLaTECKc3S3I12ivnXkqqML_j58=w400","gaston rosato":"https://lh3.googleusercontent.com/d/1KytOrn0lwCdc7eS24DkyCUpsONzZ8-ul=w400","alejandro dalbon":"https://lh3.googleusercontent.com/d/1DZ3yX1K9GrUOR466KB0DrzjD9KkIgKSI=w400","javier de buono":"https://lh3.googleusercontent.com/d/1qybnF3Ffoty4tosHQsY-qRHEksqf1Kzs=w400","valentin romero":"https://lh3.googleusercontent.com/d/1uCHERWBCx4xT62HOXAG2k9-KMxNN32bj=w400","leonardo villegas":"https://lh3.googleusercontent.com/d/1apbdjXixLyzZNuIICU0kV0KfMO18oyYC=w400","gerardo crisafulli":"https://lh3.googleusercontent.com/d/13bL6Quob9LKo75TKkJ6lUaHarPgrJw-9=w400","jorge gauna":"https://lh3.googleusercontent.com/d/1U_LaiQiNJAZkDYyeffdIqKs3MXtsZ-rh=w400","mariano kassardjian":"https://lh3.googleusercontent.com/d/1W_U7tHpKXtltBxpldYzRMra7kMr2-D2g=w400","mauro finco":"https://lh3.googleusercontent.com/d/1B6Tr3p0F8-ZU80zOEl_CjQPtM-G7iJUL=w400","gaston martinez":"https://lh3.googleusercontent.com/d/1pdw-6jib7O91EKew8gnF6jAWEyplaoW0=w400","ignacio lemos":"https://lh3.googleusercontent.com/d/1sSM4cc2oWVYDU02nHgarx5yFkHBq3x16=w400","cristobal riveros":"https://lh3.googleusercontent.com/d/17YxBYPjcLko6eshLCpQr5SvxFE7OT8nU=w400","vicente kruger":"https://lh3.googleusercontent.com/d/1FzgFsRkXDLEeOEjGgdbMFN1pwVXY1sJx=w400","guillermo chamorro":"https://lh3.googleusercontent.com/d/1X7hiVGyDjLq-BUpEgyB2Qff3zWEUiGzn=w400","gaspar gonzalez":"https://lh3.googleusercontent.com/d/1dsf_Hf8q759LOKhhcggspOg3d_nMXClC=w400"};
 function normKey(s){return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();}
 function avatarHTML(p){
@@ -545,7 +546,7 @@ function avatarHTML(p){
 })();
 
 /* Avatar chico para la tabla de ranking */
-window.rkErr=function(img,num){img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';};
+window.rkErr=function(img,num){var n=+(img.dataset.r||0);if(n<3){img.dataset.r=n+1;setTimeout(function(){img.src=img.src.split('?cb=')[0]+'?cb='+Date.now();},900*(n+1));}else{img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';}};
 function rkAvatar(p){
   var url=p.photo||PHOTOS[normKey(p.name)];
   if(url){return '<span class="rkav"><img src="'+url+'" alt="" loading="lazy" onerror="rkErr(this,'+p.num+')"></span>';}
@@ -580,11 +581,12 @@ function rkAvatar(p){
 
 /* Galería Toay (Fecha 2) + lightbox */
 var TOAY=["18XlIch1-fPUIb7GoOjQm8tOtFrNV50Wn","15duqltGxWp93nSwUvoql4srMPpHO83d1","1BxSZNl8n_ljPUgVzJaR_rzJhLxcSH2zP","1QslhDZeuYWeJbgfA10pQN4aYJqGIZYbF","1F3nleLyqBnNW1iYDh-bSf5bJcY9kdDC2","1FJ1iW4AJYOCPNhdkf5CWuyGwiNihjScj","18qx0igT0YgfJ2eWU5CYDur-wb9P5OZFZ","1LaSehm3MjyI1aBCoehnz4kk5myLts3u8","1k9QFcVDNO4hnrXcoLh5ViU29ZrkAc2BA","1RsWrA0UelvcyHW_iaDKai2s77ixCeUrz","11BzhITGRNFm4hqD006MHlTqrjRhiC1Gq","10Tn29INuGK3ZFH8Dj3pu3eeBjDusn0Dl","1no96-dN7rQN6cPOLCbhHsxoMKMmWcrpg","1nHZa1Ldl9McN1u_4BGOKEdZYDUmwqgAr","1vY2pzboTdA1tPkY4a0mTklyayXVxxKyT","1q898BuNEtjUjQb01nI2pniKXy5U22bgM","1ei2tiG5A7GLG2hUzjl2NkR19e3ztIYvz","1irgDgCdCr-WHfW5RpWkxPyvSZZ-qrcv7","1EZbPcaEp15J_phdiHiv-zBWn7U0aZw0G","1L3mlxuQCz2jNbuIB8F0grEDz14voFL86","1GDg1qKUKKLjoAwylZnZCkVKbfGkCvpwE","14_qcOBSGCmBQFdeJykyGXZP-FuY_CTfI","1aWahCmqFKa5RLhvtPGiuVGLIVfiEDqGs","110bqAZB32-T_l9zcWRmCf53pnu9-BgZ6","1Q61oBVn57mP4pZtra5TQY3RkunpKqyZx","1EZDN8vVxbuvVJkc-berhtfTor_37wYUj","1eGsfclMeCCU_CJiv2cXHO6PXSJtXi7VB","1T_zQt4hp_xHEiRmDgWPYYSdiqKaB4sP_","1PV6Pf5qbrYVmYpI84U4yl4seva9g1yk7","1K6prfgdVe_iy_wRns2D3KrXFRzzWSbWI","1mEHmQ_wvnOqBUkzPJ19nm8sHxxZBF7fh","1ajPuM4oomub4w9pGLPwFAmCvWPHZw993","1EqOYWENS7Ll9cHLxo5QFo-EH8BdrsvFy","1kdMWXaSyNEW0LTeEAMgOn9xyVRh021P_","15iaD0Mqbrvm0h8hxPW-qgP1wZbM9MxR7","1n5W1KSlCogJTihWymYJG4ZKqST-_ozkm","18SmCkId_WEW-ONAeVeJj5QK7kfdjJCbp","1DNL3HOuSmWcb6FIkb6wGFmO-LLIhXPSC","1a0_Fvm8CjtAN1sSzMDCd9qjxDE4wkRgB","1R4JN3v2tZ24A-Sq70Xk_vs2poLxt1N9O"];
+window.gErr=function(img){var n=+(img.dataset.r||0);if(n<5){img.dataset.r=n+1;setTimeout(function(){img.src=img.src.split('?cb=')[0]+'?cb='+Date.now();},700*(n+1)+Math.random()*500);}};
 (function(){
   var g=document.getElementById("galToay");if(!g)return;
   TOAY.forEach(function(id,i){
     var d=el("div","gitem");
-    d.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+id+'=w400" alt="Toay 2026" loading="lazy">';
+    d.innerHTML='<img src="https://lh3.googleusercontent.com/d/'+id+'=w400" alt="Toay 2026" loading="lazy" onerror="gErr(this)">';
     d.addEventListener("click",function(){openLB(i);});
     g.appendChild(d);
   });

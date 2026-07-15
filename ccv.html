@@ -222,7 +222,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 
 <nav><div class="wrap">
   <div class="navleft">
-    <a href="https://gp3sports.lat" class="backhome" title="Volver a GP3 Sports" aria-label="Volver a GP3 Sports">&#8592;</a>
+    <a href="https://gp3sports.lat" class="backhome" title="Volver" aria-label="Volver" onclick="if(history.length>1){history.back();return false}">&#8592;</a>
     <a href="#inicio" class="gp3logo"><img class="brandlogo" src="https://lh3.googleusercontent.com/d/1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2=w400" alt="GP3 · CCV" onerror="this.outerHTML='<span style=&quot;font-family:Staatliches,sans-serif;font-size:30px;font-style:italic;color:#EB0000&quot;>GP3</span> <span style=&quot;font-family:Staatliches,sans-serif;font-size:14px;letter-spacing:.2em;color:#14499B&quot;>CCV</span>'"></a>
   </div>
   <button class="burger" id="burger" aria-label="Menú">&#9776;</button>
@@ -239,6 +239,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
 </div></nav>
 
 <header class="hero view show" id="inicio"><div class="wrap">
+  <img src="https://lh3.googleusercontent.com/d/1xYlJbp3vBLX9h_M83eomUxE1GhlaWrl2=w400" alt="CCV · Campeonato Chileno de Velocidad" style="height:92px;width:auto;display:block;margin:0 auto 16px;object-fit:contain" onerror="this.style.display='none'">
   <div class="k">GP3 Chile</div>
   <h1>Campeonato<br><span class="b">Chileno</span> de Velocidad</h1>
   <p class="sub">¿Estás listo para vivir la velocidad al límite?</p>
@@ -411,7 +412,7 @@ function avatarHTML(p){
   if(url){return '<div class="avatar"><img src="'+url+'" alt="'+p.name+'" loading="lazy" onerror="avImgErr(this,'+p.num+')"></div>';}
   return '<div class="avatar"><span class="num">'+p.num+'</span></div>';
 }
-window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+num+'</span>';};
+window.avImgErr=function(img,num){var n=+(img.dataset.r||0);if(n<3){img.dataset.r=n+1;setTimeout(function(){img.src=img.src.split('?cb=')[0]+'?cb='+Date.now();},900*(n+1));}else{img.parentNode.innerHTML='<span class="num">'+num+'</span>';}};
 
 (function(){
   var tabsEl=document.getElementById("pilTabs"),body=document.getElementById("pilBody");
@@ -437,7 +438,7 @@ window.avImgErr=function(img,num){img.parentNode.innerHTML='<span class="num">'+
   renderPil(allCats[0]);
 })();
 
-window.rkErr=function(img,num){img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';};
+window.rkErr=function(img,num){var n=+(img.dataset.r||0);if(n<3){img.dataset.r=n+1;setTimeout(function(){img.src=img.src.split('?cb=')[0]+'?cb='+Date.now();},900*(n+1));}else{img.parentNode.innerHTML='<span class="rknum">'+num+'</span>';}};
 function rkAvatar(p){
   var url=p.photo||PHOTOS[normKey(p.name)];
   if(url){return '<span class="rkav"><img src="'+url+'" alt="" loading="lazy" onerror="rkErr(this,'+p.num+')"></span>';}
