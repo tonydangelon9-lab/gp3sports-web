@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/inscripcion.html",
+      "destination": "https://panel.gp3sports.lat/inscripcion.html",
+      "permanent": false
+    },
+    {
+      "source": "/inscripcion",
+      "destination": "https://panel.gp3sports.lat/inscripcion.html",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/gp3-logo.png",
