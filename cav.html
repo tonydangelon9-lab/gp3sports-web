@@ -14,6 +14,7 @@
 <meta name="twitter:title" content="CAV · Campeonato Argentino de Velocidad">
 <meta name="twitter:image" content="https://gp3sports.vercel.app/gp3-logo.png">
 <link rel="canonical" href="https://gp3sports.lat/cav.html">
+<script src="noticias-gp3.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:ital,wght@0,400;0,600;0,700;0,900;1,700&display=swap" rel="stylesheet">
@@ -573,7 +574,7 @@ function rkAvatar(p){
 })();
 
 /* Noticias */
-(function(){var g=document.getElementById("newsGrid");NEWS.forEach(function(n){
+(function(){var g=document.getElementById("newsGrid");(window.GP3NEWS||[]).concat(NEWS).forEach(function(n){
   g.appendChild(el("div","newsc",
     '<div class="ph">GP3 · CAV</div>'+
     '<div class="body"><div class="tag">'+n.tag+'</div><h3>'+n.title+'</h3><p>'+n.text+'</p></div>'));
