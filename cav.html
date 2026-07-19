@@ -576,7 +576,7 @@ function rkAvatar(p){
 /* Noticias */
 (function(){var g=document.getElementById("newsGrid");(window.GP3NEWS||[]).concat(NEWS).forEach(function(n){
   g.appendChild(el("div","newsc",
-    '<div class="ph">GP3 · CAV</div>'+
+    (n.imagen?'<div class="ph" style="padding:0;overflow:hidden;height:190px"><img src="'+n.imagen+'" style="width:100%;height:100%;object-fit:cover;display:block" alt=""></div>':'<div class="ph">GP3 · CAV</div>')+
     '<div class="body"><div class="tag">'+n.tag+'</div><h3>'+n.title+'</h3><p>'+n.text+'</p></div>'));
 });})();
 
