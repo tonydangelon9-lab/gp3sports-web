@@ -462,7 +462,7 @@ function rkAvatar(p){
 })();
 
 (function(){var g=document.getElementById("newsGrid");(window.GP3NEWS||[]).concat(NEWS).forEach(function(n){
-  g.appendChild(el("div","newsc",(n.imagen?'<div class="ph" style="padding:0;overflow:hidden;height:190px"><img src="'+n.imagen+'" style="width:100%;height:100%;object-fit:cover;display:block" alt=""></div>':'<div class="ph">GP3 · CCV</div>')+'<div class="body"><div class="tag">'+n.tag+'</div><h3>'+n.title+'</h3><p>'+n.text+'</p></div>'));
+  g.appendChild(el("div","newsc",(n.imagen?'<div class="ph" style="padding:0;height:auto;overflow:hidden"><img src="'+n.imagen+'" style="width:100%;height:auto;display:block" alt=""></div>':'<div class="ph">GP3 · CCV</div>')+'<div class="body"><div class="tag">'+n.tag+'</div><h3>'+n.title+'</h3><p>'+n.text+'</p></div>'));
 });})();
 
 (function(){var g=document.getElementById("mediaGrid");
