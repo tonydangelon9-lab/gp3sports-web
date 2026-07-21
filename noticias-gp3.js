@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-07-21", tag:"Instagram", title:"🏁 EL CAMPEONATO SIGUE...", text:"🏁 EL CAMPEONATO SIGUE...  Tras las primeras fechas de la temporada, estos son los cinco pilotos con mayor puntaje acumulado en sus respectivas categorías.  Concordia será una fech", imagen:"NOTICIAS-IG/DbDk_I-o9zo.jpg", ig:"DbDk_I-o9zo" },
  { fecha:"2026-06-22", tag:"Instagram", title:"🏆 RANKING 2026 ACTUALIZADO | CAV 🇦🇷", text:"🏆 RANKING 2026 ACTUALIZADO | CAV 🇦🇷  Finalizada la tercera fecha del Campeonato Argentino de Velocidad en San Nicolás, así quedan las posiciones del campeonato en cada una de la", imagen:"NOTICIAS-IG/DZ3kVdSHB4Y.jpg", ig:"DZ3kVdSHB4Y" },
  { fecha:"2026-07-10", tag:"Instagram", title:"🏁 Un fin de semana. Miles de emociones.", text:"🏁 Un fin de semana. Miles de emociones.  Revive algunos de los mejores momentos de la última fecha del Campeonato Argentino de Velocidad en San Nicolás. 🏍️🔥", imagen:"NOTICIAS-IG/DaoFL7DIS7a.jpg", ig:"DaoFL7DIS7a" },
  { fecha:"2026-06-30", tag:"Instagram", title:"🏁 El Campeonato Argentino de Velocidad ya tiene su próximo destino.", text:"🏁 El Campeonato Argentino de Velocidad ya tiene su próximo destino.  Tras una intensa tercera fecha en San Nicolás, el CAV continúa su temporada 2026 con la mirada puesta en la 4.", imagen:"NOTICIAS-IG/DaOInjPIyHa.jpg", ig:"DaOInjPIyHa" },
