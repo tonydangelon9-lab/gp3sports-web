@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-07-22", tag:"Instagram", title:"🏁 UN CIRCUITO. DOS CAMPEONATOS.", text:"🏁 UN CIRCUITO. DOS CAMPEONATOS.  El Campeonato Chileno de Velocidad ofrece dos formas de competir y dos desafíos únicos sobre una misma pista.  🇨🇱 Campeonato Nacional: reúne a l", imagen:"NOTICIAS-IG/DbGJxDaoNgz.jpg", ig:"DbGJxDaoNgz" },
  { fecha:"2026-07-21", tag:"Instagram", title:"🏁 EL CAMPEONATO SIGUE...", text:"🏁 EL CAMPEONATO SIGUE...  Tras las primeras fechas de la temporada, estos son los cinco pilotos con mayor puntaje acumulado en sus respectivas categorías.  Concordia será una fech", imagen:"NOTICIAS-IG/DbDk_I-o9zo.jpg", ig:"DbDk_I-o9zo" },
  { fecha:"2026-06-22", tag:"Instagram", title:"🏆 RANKING 2026 ACTUALIZADO | CAV 🇦🇷", text:"🏆 RANKING 2026 ACTUALIZADO | CAV 🇦🇷  Finalizada la tercera fecha del Campeonato Argentino de Velocidad en San Nicolás, así quedan las posiciones del campeonato en cada una de la", imagen:"NOTICIAS-IG/DZ3kVdSHB4Y.jpg", ig:"DZ3kVdSHB4Y" },
  { fecha:"2026-07-10", tag:"Instagram", title:"🏁 Un fin de semana. Miles de emociones.", text:"🏁 Un fin de semana. Miles de emociones.  Revive algunos de los mejores momentos de la última fecha del Campeonato Argentino de Velocidad en San Nicolás. 🏍️🔥", imagen:"NOTICIAS-IG/DaoFL7DIS7a.jpg", ig:"DaoFL7DIS7a" },
