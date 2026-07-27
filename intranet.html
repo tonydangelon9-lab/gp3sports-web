@@ -2,19 +2,63 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
 <title>Intranet · GP3 Sports LATAM</title>
-<!-- La intranet es el portal de módulos ya existente (Neumáticos, Entradas, Inscripción, Admin).
-     Al publicar, dejá ese portal (su build actual) en la carpeta /intranet/ y este archivo redirige ahí. -->
-<meta http-equiv="refresh" content="0; url=intranet/">
 <style>
-body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:#05070d;color:#9fb4d0;
-  font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:#EB0000}
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Titillium Web', 'Segoe UI', Helvetica, Arial, sans-serif; background:#0C0F14; color:#fff; min-height:100vh; }
+  .top { border-top: 5px solid #E10600; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 60px; }
+  .brand { font-weight: 800; font-style: italic; letter-spacing: 2px; font-size: 18px; }
+  .brand span { color:#E10600; }
+  h1 { font-size: 30px; font-weight: 800; font-style: italic; text-transform: uppercase; margin-top: 34px; letter-spacing: -0.3px; }
+  .sub { color:#9aa4b0; margin-top: 8px; font-size: 15px; line-height:1.6; max-width: 640px; }
+  .rule { width: 64px; height: 5px; background: linear-gradient(90deg,#6CACE4 0 65%,#E10600 65% 100%); transform: skewX(-20deg); margin: 18px 0 8px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 30px; }
+  a.card { display:block; background:#12161d; border:1px solid #232a33; border-radius: 12px; padding: 24px 26px; text-decoration:none; color:#fff; transition: border-color .15s; }
+  a.card:hover { border-color:#6CACE4; }
+  .card .ico { font-size: 26px; }
+  .card h3 { font-size: 17px; font-weight: 800; font-style: italic; text-transform: uppercase; margin-top: 12px; }
+  .card h3 span { color:#6CACE4; }
+  .card p { color:#9aa4b0; font-size: 13.5px; line-height: 1.6; margin-top: 8px; }
+  .card .meta { font-size: 11.5px; color:#5f6975; margin-top: 12px; text-transform: uppercase; letter-spacing: 1px; }
+  .card .meta b { color:#E10600; }
+  .aviso { margin-top: 34px; font-size: 12.5px; color:#5f6975; line-height: 1.6; border-top: 1px solid #232a33; padding-top: 16px; }
 </style>
 </head>
 <body>
-<p>Redirigiendo a la Intranet… si no ocurre, <a href="intranet/">entra aquí</a>.</p>
+<div class="top"></div>
+<div class="wrap">
+  <div class="brand">GP3 <span>SPORTS</span> · LATAM</div>
+  <h1>Intranet</h1>
+  <div class="rule"></div>
+  <p class="sub">Portal de gestión interna de GP3 Sports. Cada sección tiene su propia clave de acceso, entregada por la organización.</p>
+
+  <div class="grid">
+    <a class="card" href="https://panel.gp3sports.lat">
+      <div class="ico">🧰</div>
+      <h3>Panel de <span>Gestión</span></h3>
+      <p>Inscripciones, cobros, entradas, credenciales y acreditaciones. Acceso para administración y vendedores.</p>
+      <div class="meta">panel.gp3sports.lat · <b>requiere clave</b></div>
+    </a>
+    <a class="card" href="presentaciones.html">
+      <div class="ico">📊</div>
+      <h3>Presenta<span>ciones</span></h3>
+      <p>Material comercial oficial para el equipo de ventas y patrocinadores: dossiers de patrocinio vigentes, en línea y en PDF.</p>
+      <div class="meta">gp3sports.lat/presentaciones · <b>requiere clave</b></div>
+    </a>
+    <a class="card" href="https://moto4latincup.lat/datos.html">
+      <div class="ico">📈</div>
+      <h3>Panel de <span>Datos</span></h3>
+      <p>Métricas del ecosistema en vivo: audiencia, alcance por carrera, evolución histórica. Actualización diaria automática.</p>
+      <div class="meta">moto4latincup.lat/datos · <b>requiere clave</b></div>
+    </a>
+  </div>
+
+  <div class="aviso">
+    Acceso reservado al equipo de GP3 Sports. Si necesitas una clave, escribe a antonio@gp3sports.lat · <a href="index.html" style="color:#6CACE4; text-decoration:none;">Volver al sitio público</a>
+  </div>
+</div>
 </body>
 </html>

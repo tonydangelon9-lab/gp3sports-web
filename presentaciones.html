@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Presentaciones · GP3 Sports</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Titillium Web', 'Segoe UI', Helvetica, Arial, sans-serif; background:#0C0F14; color:#fff; min-height:100vh; }
+  .top { border-top: 5px solid #E10600; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 40px 20px 60px; }
+  .brand { font-weight: 800; font-style: italic; letter-spacing: 2px; font-size: 18px; }
+  .brand span { color:#E10600; }
+  h1 { font-size: 30px; font-weight: 800; font-style: italic; text-transform: uppercase; margin-top: 34px; letter-spacing: -0.3px; }
+  .sub { color:#9aa4b0; margin-top: 8px; font-size: 15px; line-height:1.6; max-width: 640px; }
+  .rule { width: 64px; height: 5px; background: linear-gradient(90deg,#6CACE4 0 65%,#E10600 65% 100%); transform: skewX(-20deg); margin: 18px 0 8px; }
+
+  /* gate */
+  #gate { margin-top: 46px; background:#12161d; border:1px solid #232a33; border-radius: 10px; padding: 34px; max-width: 460px; }
+  #gate h2 { font-size: 16px; font-weight:700; text-transform: uppercase; letter-spacing: 2px; color:#6CACE4; }
+  #gate p { color:#9aa4b0; font-size: 13.5px; margin-top: 8px; line-height: 1.5; }
+  #gate input { width: 100%; margin-top: 16px; padding: 12px 14px; border-radius: 8px; border: 1px solid #2c343f; background:#0C0F14; color:#fff; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; outline:none; }
+  #gate input:focus { border-color:#6CACE4; }
+  #gate button { margin-top: 14px; width: 100%; padding: 12px; border: 0; border-radius: 8px; background:#E10600; color:#fff; font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; }
+  #gate button:hover { background:#c40500; }
+  #gate .err { color:#ff6b64; font-size: 13px; margin-top: 10px; display:none; }
+
+  /* content */
+  #contenido { display:none; }
+  .card { background:#12161d; border:1px solid #232a33; border-radius: 12px; padding: 26px 28px; margin-top: 28px; display:flex; gap: 22px; align-items:center; flex-wrap: wrap; }
+  .card .info { flex: 1; min-width: 260px; }
+  .card h3 { font-size: 20px; font-weight: 800; font-style: italic; text-transform: uppercase; }
+  .card h3 em { color:#6CACE4; font-style: italic; }
+  .card p { color:#9aa4b0; font-size: 13.5px; line-height: 1.6; margin-top: 8px; }
+  .card .meta { font-size: 12px; color:#5f6975; margin-top: 10px; text-transform: uppercase; letter-spacing: 1px; }
+  .btns { display:flex; gap: 10px; flex-wrap: wrap; }
+  .btn { display:inline-block; padding: 12px 20px; border-radius: 8px; font-weight: 800; font-size: 14px; text-decoration: none; text-transform: uppercase; letter-spacing: .5px; }
+  .btn-v { background:#E10600; color:#fff; }
+  .btn-v:hover { background:#c40500; }
+  .btn-d { background:transparent; color:#6CACE4; border: 1.5px solid #6CACE4; }
+  .btn-d:hover { background:rgba(108,172,228,.12); }
+  #visor { display:none; margin-top: 26px; }
+  #visor iframe { width: 100%; height: 82vh; border: 1px solid #232a33; border-radius: 10px; background:#fff; }
+  .aviso { margin-top: 26px; font-size: 12.5px; color:#5f6975; line-height: 1.6; border-top: 1px solid #232a33; padding-top: 16px; }
+  .volver { color:#6CACE4; text-decoration:none; font-size: 13.5px; }
+</style>
+</head>
+<body>
+<div class="top"></div>
+<div class="wrap">
+  <div class="brand">GP3 <span>SPORTS</span> · INTRANET</div>
+  <h1>Presentaciones</h1>
+  <div class="rule"></div>
+  <p class="sub">Material comercial oficial de GP3 Sports para el equipo de ventas y patrocinadores. Uso reservado — no redistribuir públicamente.</p>
+
+  <div id="gate">
+    <h2>Acceso con clave</h2>
+    <p>Ingresa la clave entregada por GP3 Sports para ver las presentaciones.</p>
+    <input id="clave" type="password" placeholder="CLAVE" onkeydown="if(event.key==='Enter')entrar()">
+    <button onclick="entrar()">Entrar</button>
+    <div class="err" id="err">Clave incorrecta.</div>
+  </div>
+
+  <div id="contenido">
+    <div class="card">
+      <div class="info">
+        <h3>Dossier de Patrocinio · <em>GP3 CAV 2026</em></h3>
+        <p>Campeonato Argentino de Velocidad — 7 fechas, 9 categorías, métricas por carrera, módulos de patrocinio con valores referenciales en USD y acceso al panel de datos en vivo.</p>
+        <div class="meta">PDF · 11 páginas · Vigente al 26-07-2026 · ES</div>
+      </div>
+      <div class="btns">
+        <a class="btn btn-v" href="#" onclick="verOnline(event)">Ver en línea</a>
+        <a class="btn btn-d" href="dossier-cav-2026-vk8r3.pdf" download="GP3-CAV-Dossier-Patrocinio-2026.pdf">Descargar PDF</a>
+      </div>
+    </div>
+
+    <div id="visor"><iframe id="visorFrame" loading="lazy"></iframe></div>
+
+    <div class="aviso">
+      Documento comercial de circulación controlada. La versión publicada aquí es siempre la vigente; versiones descargadas anteriormente pueden contener valores desactualizados. Datos de audiencia en vivo: <a class="volver" href="https://moto4latincup.lat/datos.html">Panel de Datos</a>. Contacto: antonio@gp3sports.lat
+    </div>
+  </div>
+</div>
+
+<script>
+  var CLAVE = 'PRESENTA2026';
+  function entrar(){
+    var v = (document.getElementById('clave').value || '').trim().toUpperCase();
+    if (v === CLAVE) { sessionStorage.setItem('gp3_pres_ok','1'); mostrar(); }
+    else { document.getElementById('err').style.display = 'block'; }
+  }
+  function mostrar(){
+    document.getElementById('gate').style.display = 'none';
+    document.getElementById('contenido').style.display = 'block';
+  }
+  function verOnline(e){
+    e.preventDefault();
+    var v = document.getElementById('visor');
+    document.getElementById('visorFrame').src = 'dossier-cav-2026-vk8r3.pdf#view=FitH';
+    v.style.display = 'block';
+    v.scrollIntoView({behavior:'smooth'});
+  }
+  if (sessionStorage.getItem('gp3_pres_ok') === '1') mostrar();
+</script>
+</body>
+</html>
