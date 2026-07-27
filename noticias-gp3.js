@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-07-27", tag:"Instagram", title:"🏁 ¡Comienza la cuenta regresiva! Faltan 11 días para el Gran Premio Concordia, 4ª fecha…", text:"🏁 ¡Comienza la cuenta regresiva! Faltan 11 días para el Gran Premio Concordia, 4ª fecha del Campeonato Argentino de Velocidad. 7, 8 y 9 de agosto · Autódromo Ciudad de Concordia, ", imagen:"NOTICIAS-IG/DbTC9BakuWo.jpg", ig:"DbTC9BakuWo" },
  { fecha:"2026-07-26", tag:"Instagram", title:"La velocidad vuelve a Entre Ríos. 🏁 Nos vemos en el Gran Premio Concordia, 4ª fecha del…", text:"La velocidad vuelve a Entre Ríos. 🏁 Nos vemos en el Gran Premio Concordia, 4ª fecha del CAV. 7, 8 y 9 de agosto. #CAV #Concordia #GP3Sports #NosVemosEnConcordia", imagen:"NOTICIAS-IG/DbRi05RH7mL.jpg", ig:"DbRi05RH7mL" },
  { fecha:"2026-07-24", tag:"Instagram", title:"🏁 La temporada continúa en Concordia.", text:"🏁 La temporada continúa en Concordia.  La 4ª fecha del Campeonato Argentino de Velocidad 2026 ya está lista para recibir a pilotos, equipos y aficionados en un fin de semana donde", imagen:"NOTICIAS-IG/DbLTWxrI-MA.jpg", ig:"DbLTWxrI-MA" },
  { fecha:"2026-07-22", tag:"Instagram", title:"🏁 UN CIRCUITO. DOS CAMPEONATOS.", text:"🏁 UN CIRCUITO. DOS CAMPEONATOS.  El Campeonato Chileno de Velocidad ofrece dos formas de competir y dos desafíos únicos sobre una misma pista.  🇨🇱 Campeonato Nacional: reúne a l", imagen:"NOTICIAS-IG/DbGJxDaoNgz.jpg", ig:"DbGJxDaoNgz" },
