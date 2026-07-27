@@ -241,7 +241,7 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
     <a class="lnk" href="#noticias">Noticias</a>
     <a class="lnk" href="#media">Media</a>
     <a class="lnk" href="#sponsors">Sponsors</a>
-    <a class="btn" href="https://panel.gp3sports.lat"><span class="dot"></span>ENTRADAS</a>
+    <a class="btn" href="https://app.tickit.global/web/event/gran-premio-concordia-gp-cav-2026-08-07" target="_blank" rel="noopener"><span class="dot"></span>ENTRADAS</a>
   </div>
 </div></nav>
 
@@ -507,7 +507,7 @@ function rkAvatar(p){
 (function(){
   window.addEventListener("hashchange",function(){ if(window.fbq) fbq("track","PageView"); });
   document.addEventListener("click",function(e){
-    var a=e.target.closest && e.target.closest('a[href*="panel.gp3sports.lat"]');
+    var a=e.target.closest && e.target.closest('a[href*="tickit.global"]');
     if(a && window.fbq && /entrada/i.test(a.textContent||"")) fbq("track","InitiateCheckout");
   });
 })();
