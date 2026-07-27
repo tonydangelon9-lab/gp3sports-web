@@ -101,6 +101,10 @@
     v.style.display = 'block';
     v.scrollIntoView({behavior:'smooth'});
   }
+  try {
+    var qk = new URLSearchParams(location.search).get('k');
+    if (qk && qk.trim().toUpperCase() === CLAVE) { sessionStorage.setItem('gp3_pres_ok','1'); history.replaceState(null,'',location.pathname); }
+  } catch(e) {}
   if (sessionStorage.getItem('gp3_pres_ok') === '1') mostrar();
 </script>
 </body>
