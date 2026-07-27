@@ -70,12 +70,10 @@
         <div class="meta">Formato pantalla 16:9 · 11 láminas · Vigente al 27-07-2026 · ES</div>
       </div>
       <div class="btns">
-        <a class="btn btn-v" href="#" onclick="verOnline(event)">Ver en línea</a>
+        <a class="btn btn-v" href="presentacion-cav.html">▶ Presentar</a>
         <a class="btn btn-d" href="dossier-cav-2026-vk8r3.pdf" download="GP3-CAV-Dossier-Patrocinio-2026.pdf">Descargar PDF</a>
       </div>
     </div>
-
-    <div id="visor"><iframe id="visorFrame" loading="lazy"></iframe></div>
 
     <div class="aviso">
       Documento comercial de circulación controlada. La versión publicada aquí es siempre la vigente; versiones descargadas anteriormente pueden contener valores desactualizados. Datos de audiencia en vivo: <a class="volver" href="https://moto4latincup.lat/datos.html">Panel de Datos</a>. Contacto: antonio@gp3sports.lat
@@ -93,13 +91,6 @@
   function mostrar(){
     document.getElementById('gate').style.display = 'none';
     document.getElementById('contenido').style.display = 'block';
-  }
-  function verOnline(e){
-    e.preventDefault();
-    var v = document.getElementById('visor');
-    document.getElementById('visorFrame').src = 'dossier-cav-2026-vk8r3.pdf#view=FitH';
-    v.style.display = 'block';
-    v.scrollIntoView({behavior:'smooth'});
   }
   try {
     var qk = new URLSearchParams(location.search).get('k');
