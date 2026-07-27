@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-07-26", tag:"Instagram", title:"La velocidad vuelve a Entre Ríos. 🏁 Nos vemos en el Gran Premio Concordia, 4ª fecha del…", text:"La velocidad vuelve a Entre Ríos. 🏁 Nos vemos en el Gran Premio Concordia, 4ª fecha del CAV. 7, 8 y 9 de agosto. #CAV #Concordia #GP3Sports #NosVemosEnConcordia", imagen:"NOTICIAS-IG/DbRi05RH7mL.jpg", ig:"DbRi05RH7mL" },
  { fecha:"2026-07-24", tag:"Instagram", title:"🏁 La temporada continúa en Concordia.", text:"🏁 La temporada continúa en Concordia.  La 4ª fecha del Campeonato Argentino de Velocidad 2026 ya está lista para recibir a pilotos, equipos y aficionados en un fin de semana donde", imagen:"NOTICIAS-IG/DbLTWxrI-MA.jpg", ig:"DbLTWxrI-MA" },
  { fecha:"2026-07-22", tag:"Instagram", title:"🏁 UN CIRCUITO. DOS CAMPEONATOS.", text:"🏁 UN CIRCUITO. DOS CAMPEONATOS.  El Campeonato Chileno de Velocidad ofrece dos formas de competir y dos desafíos únicos sobre una misma pista.  🇨🇱 Campeonato Nacional: reúne a l", imagen:"NOTICIAS-IG/DbGJxDaoNgz.jpg", ig:"DbGJxDaoNgz" },
  { fecha:"2026-07-21", tag:"Instagram", title:"🏁 EL CAMPEONATO SIGUE...", text:"🏁 EL CAMPEONATO SIGUE...  Tras las primeras fechas de la temporada, estos son los cinco pilotos con mayor puntaje acumulado en sus respectivas categorías.  Concordia será una fech", imagen:"NOTICIAS-IG/DbDk_I-o9zo.jpg", ig:"DbDk_I-o9zo" },
