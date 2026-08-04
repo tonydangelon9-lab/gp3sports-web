@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-08-04", tag:"Instagram", title:"3 días. Tres jornadas de velocidad, adrenalina y emoción en Concordia. ⚡", text:"3 días. Tres jornadas de velocidad, adrenalina y emoción en Concordia. ⚡ 4ª fecha · Campeonato Argentino de Velocidad 2026. #CAV #GP3Sports #Concordia #MotociclismoArgentino #infoi", imagen:"NOTICIAS-IG/DbnpTyCje1v.jpg", ig:"DbnpTyCje1v" },
  { fecha:"2026-08-03", tag:"Instagram", title:"La calma antes de la tormenta. Última semana para agendarte: Gran Premio Concordia, 7 al…", text:"La calma antes de la tormenta. Última semana para agendarte: Gran Premio Concordia, 7 al 9 de agosto. 🗓️ #CAV #Concordia #GP3Sports #infoinscripcion", imagen:"NOTICIAS-IG/DbmJMTtH_jN.jpg", ig:"DbmJMTtH_jN" },
  { fecha:"2026-08-03", tag:"Instagram", title:"Faltan 4 días para que Entre Ríos vibre con el CAV. 🏁", text:"Faltan 4 días para que Entre Ríos vibre con el CAV. 🏁 Autódromo Ciudad de Concordia · 7, 8 y 9 de agosto. #CAV #EntreRios #Concordia #GP3Sports #infoinscripcion", imagen:"NOTICIAS-IG/DblEhIKkhe8.jpg", ig:"DblEhIKkhe8" },
  { fecha:"2026-08-02", tag:"Instagram", title:"Cada posición se pelea hasta el final. Así llega el campeonato a su 4ª fecha. 🏁 Concord…", text:"Cada posición se pelea hasta el final. Así llega el campeonato a su 4ª fecha. 🏁 Concordia, 7 al 9 de agosto. #CAV #GP3Sports #Concordia #infoinscripcion", imagen:"NOTICIAS-IG/DbjkYpMkSpf.jpg", ig:"DbjkYpMkSpf" },
