@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-08-06", tag:"Instagram", title:"Falta 1 día. Mañana comienza el Gran Premio Concordia. 🔥", text:"Falta 1 día. Mañana comienza el Gran Premio Concordia. 🔥 Entrada general $5.000 · Parque Cerrado $20.000 · Menores de 12 gratis. #CAV #GP3Sports #Concordia #MotociclismoArgentino ", imagen:"NOTICIAS-IG/Dbsxs3LGuIX.jpg", ig:"Dbsxs3LGuIX" },
  { fecha:"2026-08-05", tag:"Instagram", title:"Faltan 2 días. El viernes arranca el Gran Premio Concordia. 🏍️", text:"Faltan 2 días. El viernes arranca el Gran Premio Concordia. 🏍️ #CAV #Concordia #GP3Sports #MotociclismoArgentino #infoinscripcion", imagen:"NOTICIAS-IG/DbrSw5djgi1.jpg", ig:"DbrSw5djgi1" },
  { fecha:"2026-08-05", tag:"Instagram", title:"¡Faltan solo 2 días! 🏍️ El Gran Premio Concordia ya se siente.", text:"¡Faltan solo 2 días! 🏍️ El Gran Premio Concordia ya se siente. Viernes, sábado y domingo · Autódromo Ciudad de Concordia. #CAV #Concordia #GP3Sports #Motociclismo #infoinscripcion", imagen:"NOTICIAS-IG/DbqOH7MDNvX.jpg", ig:"DbqOH7MDNvX" },
  { fecha:"2026-08-04", tag:"Instagram", title:"Concordia se prepara. ¿Y vos? Entrada general $5.000 · Parque Cerrado $20.000. 🎟️", text:"Concordia se prepara. ¿Y vos? Entrada general $5.000 · Parque Cerrado $20.000. 🎟️ #CAV #Concordia #GP3Sports #infoinscripcion", imagen:"NOTICIAS-IG/Dbot-EEE2cd.jpg", ig:"Dbot-EEE2cd" },
