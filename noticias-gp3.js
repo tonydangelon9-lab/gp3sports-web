@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-08-30", tag:"Instagram", title:"5 días. 💨 Últimos días de espera para volver a pista.", text:"5 días. 💨 Últimos días de espera para volver a pista. San Juan Villicum · CAV · CCV · Moto4. #RumboASanJuan #CAV #CCV #Moto4 #GP3Sports", imagen:"NOTICIAS-IG/DcrpcRElB6b.jpg", ig:"DcrpcRElB6b" },
  { fecha:"2026-08-29", tag:"Instagram", title:"Faltan 6 días. 🔥 El Villicum ya se siente cerca.", text:"Faltan 6 días. 🔥 El Villicum ya se siente cerca. 5ta fecha · San Juan · 4 al 6 de septiembre. #RumboASanJuan #CAV #GP3Sports #MotociclismoArgentino", imagen:"NOTICIAS-IG/DcpEqJPH8cJ.jpg", ig:"DcpEqJPH8cJ" },
  { fecha:"2026-08-28", tag:"Instagram", title:"¡Una semana! 🗓️ En 7 días arranca la 5ta fecha en San Juan Villicum.", text:"¡Una semana! 🗓️ En 7 días arranca la 5ta fecha en San Juan Villicum. 4, 5 y 6 de septiembre. #RumboASanJuan #CAV #CCV #GP3Sports #SanJuan #Villicum", imagen:"NOTICIAS-IG/Dcmf2zan0m6.jpg", ig:"Dcmf2zan0m6" },
  { fecha:"2026-08-27", tag:"Instagram", title:"Faltan 8 días. ⏱️ La cuenta regresiva se acelera camino al Villicum.", text:"Faltan 8 días. ⏱️ La cuenta regresiva se acelera camino al Villicum. CAV · CCV · Moto4 · San Juan. #RumboASanJuan #CAV #CCV #Moto4 #GP3Sports", imagen:"NOTICIAS-IG/Dcj7Ev0ARS9.jpg", ig:"Dcj7Ev0ARS9" },
