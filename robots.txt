@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /intranet.html
+Disallow: /presentacion-cav.html
+
+Sitemap: https://gp3sports.lat/sitemap.xml
