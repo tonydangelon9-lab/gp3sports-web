@@ -37,6 +37,14 @@
     {
       "source": "/gp3-logo.png",
       "destination": "https://gp3-neumaticos.vercel.app/gp3-logo.png"
+    },
+    {
+      "source": "/cav",
+      "destination": "/cav.html"
+    },
+    {
+      "source": "/ccv",
+      "destination": "/ccv.html"
     }
   ]
 }
