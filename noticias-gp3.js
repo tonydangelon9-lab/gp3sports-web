@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-09-21", tag:"Instagram", title:"🇨🇱 CHILE X ARGENTINA 🇦🇷", text:"🇨🇱 CHILE X ARGENTINA 🇦🇷 Dos campeonatos. Dos nacionalidades. Un mismo circuito.  Del 9 al 11 de octubre, el CAV y el CCV vuelven a encontrarse en pista en el Autódromo Internac", imagen:"NOTICIAS-IG/DdkTey6IS9z.jpg", ig:"DdkTey6IS9z" },
  { fecha:"2026-09-04", tag:"Instagram", title:"¡ES HOY! 🏁 Arranca la actividad en pista de la 5ta fecha en San Juan Villicum.", text:"¡ES HOY! 🏁 Arranca la actividad en pista de la 5ta fecha en San Juan Villicum. Viernes, sábado y domingo a pura velocidad. #EsHoy #RumboASanJuan #CAV #CCV #Moto4 #GP3Sports", imagen:"NOTICIAS-IG/Dc3cyosm2Vt.jpg", ig:"Dc3cyosm2Vt" },
  { fecha:"2026-09-03", tag:"Instagram", title:"Falta 1 día. 🔥 Mañana arranca la 5ta fecha en San Juan Villicum.", text:"Falta 1 día. 🔥 Mañana arranca la 5ta fecha en San Juan Villicum. CAV · CCV · Moto4, todos en pista. #RumboASanJuan #CAV #CCV #Moto4 #GP3Sports #Villicum", imagen:"NOTICIAS-IG/Dc18oesHKMt.jpg", ig:"Dc18oesHKMt" },
  { fecha:"2026-09-09", tag:"Instagram", title:"Ranking del Campeonato Argentino de Velocidad tras la 5ª fecha en San Juan Villicum. Así…", text:"Ranking del Campeonato Argentino de Velocidad tras la 5ª fecha en San Juan Villicum. Así quedan los líderes: SBK Experto, Francisco Vélez (88), solo 4 puntos sobre Felipe Gini; SBK", imagen:"NOTICIAS-IG/DdEdIPllOMt.jpg", ig:"DdEdIPllOMt" },
