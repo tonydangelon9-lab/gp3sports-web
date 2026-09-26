@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-09-26", tag:"Instagram", title:"La batalla continúa. 🇨🇱🇦🇷 🏁🔥", text:"La batalla continúa. 🇨🇱🇦🇷 🏁🔥 Chile y Argentina vuelven a encontrarse en pista para vivir un nuevo desafío en Termas de Río Hondo. 📍 Termas de Río Hondo, Argentina 📅 9 al 11", imagen:"NOTICIAS-IG/Ddv3vg5IkUD.jpg", ig:"Ddv3vg5IkUD" },
  { fecha:"2026-09-25", tag:"Instagram", title:"Chile 🇨🇱 x Argentina 🇦🇷 se vuelven a encontrar en pista. 🏁🔥", text:"Chile 🇨🇱 x Argentina 🇦🇷 se vuelven a encontrar en pista. 🏁🔥 Dos nacionalidades, una misma pasión y un nuevo desafío en Termas de Río Hondo. 📍 Termas de Río Hondo, Argentina ", imagen:"NOTICIAS-IG/DdtUGs5oKqt.jpg", ig:"DdtUGs5oKqt" },
  { fecha:"2026-09-21", tag:"Instagram", title:"🇨🇱 CHILE X ARGENTINA 🇦🇷", text:"🇨🇱 CHILE X ARGENTINA 🇦🇷 Dos campeonatos. Dos nacionalidades. Un mismo circuito.  Del 9 al 11 de octubre, el CAV y el CCV vuelven a encontrarse en pista en el Autódromo Internac", imagen:"NOTICIAS-IG/DdkTey6IS9z.jpg", ig:"DdkTey6IS9z" },
  { fecha:"2026-09-04", tag:"Instagram", title:"¡ES HOY! 🏁 Arranca la actividad en pista de la 5ta fecha en San Juan Villicum.", text:"¡ES HOY! 🏁 Arranca la actividad en pista de la 5ta fecha en San Juan Villicum. Viernes, sábado y domingo a pura velocidad. #EsHoy #RumboASanJuan #CAV #CCV #Moto4 #GP3Sports", imagen:"NOTICIAS-IG/Dc3cyosm2Vt.jpg", ig:"Dc3cyosm2Vt" },
