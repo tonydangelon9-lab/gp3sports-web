@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Próxima fecha · GP3 Sports</title>
+<meta name="description" content="Próxima fecha de GP3 Sports (CAV y CCV): días, sede, entradas y horarios, siempre actualizados.">
+<meta property="og:title" content="Próxima fecha · GP3 Sports">
+<meta property="og:description" content="Días, sede, entradas y horarios de la próxima fecha del CAV y el CCV.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gp3sports.lat/proxima">
+<meta property="og:image" content="https://gp3sports.vercel.app/gp3-logo.png">
+<link rel="canonical" href="https://gp3sports.lat/proxima">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Red+Hat+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://gp3-neumaticos.vercel.app/gp3-logo.png">
+<style>
+:root{
+  --celeste:#6CACE4; --blue:#14499B; --bg:#05070d; --surface2:#111b2e; --line:#1d2c44;
+  --muted:#9fb4d0; --white:#fff;
+  --grad:linear-gradient(120deg,var(--celeste),var(--blue));
+  --grad-dark:linear-gradient(160deg,#0a2547 0%,#0d356b 45%,#05070d 100%);
+  --disp:"Staatliches","Arial Narrow",Arial,sans-serif;
+  --body:"Red Hat Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--white);font-family:var(--body);line-height:1.5;min-height:100vh}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+nav{border-bottom:1px solid var(--line);background:rgba(5,7,13,.9)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--disp);font-size:28px;font-style:italic;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.navl{display:flex;gap:16px;font-family:var(--disp);letter-spacing:.06em;color:var(--muted);font-size:15px}
+.navl a:hover{color:#fff}
+.hero{background:var(--grad-dark);text-align:center;padding:44px 0 38px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 50% 0%,rgba(108,172,228,.28),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.k{font-family:var(--disp);letter-spacing:.26em;font-size:13px;color:var(--celeste)}
+h1{font-family:var(--disp);font-size:clamp(38px,9vw,68px);line-height:.95;margin:10px 0 4px}
+.sub{font-family:var(--disp);letter-spacing:.06em;font-size:clamp(20px,4vw,28px);color:#d7e6fa}
+.when{font-size:clamp(17px,3vw,21px);font-weight:700;margin-top:10px}
+.champ{display:inline-block;margin-top:12px;background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:12px;padding:8px 16px;font-size:14px;font-weight:600}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);letter-spacing:.08em;font-size:18px;border-radius:999px;padding:12px 24px}
+.btn.pri{background:var(--blue);border:2px solid var(--celeste);color:#fff}
+.btn.sec{background:rgba(255,255,255,.06);border:1px solid var(--line);color:#fff}
+.main{padding:28px 0}
+.cards{display:grid;gap:12px}
+.card{background:var(--surface2);border:1px solid var(--line);border-left:4px solid var(--celeste);border-radius:14px;padding:16px 18px}
+.card .t{font-family:var(--disp);letter-spacing:.14em;font-size:13px;color:var(--celeste);margin-bottom:4px}
+.card .v{font-size:16px;font-weight:600}
+.card .v a{color:var(--celeste);text-decoration:underline;word-break:break-word}
+.muted{color:var(--muted);font-weight:400}
+.pre{white-space:pre-line}
+.price{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.price:last-child{border-bottom:none}
+.price span:last-child{font-weight:700;text-align:right}
+.loading{text-align:center;color:var(--muted);padding:40px 0}
+.note{color:var(--muted);font-size:13px;text-align:center;margin-top:18px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center;padding:22px 16px;margin-top:20px}
+footer a{color:var(--celeste)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="/" class="logo" aria-label="GP3 Sports, inicio">GP3</a>
+  <div class="navl"><a href="/cav">CAV</a><a href="/ccv">CCV</a></div>
+</div></nav>
+
+<div id="loading" class="loading">Cargando la próxima fecha…</div>
+
+<div id="content" hidden>
+<header class="hero"><div class="wrap">
+  <div class="k" id="k">PRÓXIMA FECHA</div>
+  <h1 id="nombre"></h1>
+  <div class="sub" id="sede"></div>
+  <div class="when" id="fechas"></div>
+  <div class="champ" id="campeonatos"></div>
+  <div class="btns">
+    <a class="btn pri" id="cta" href="#" target="_blank" rel="noopener" hidden></a>
+    <a class="btn sec" id="mapa" href="#" target="_blank" rel="noopener" hidden>📍 CÓMO LLEGAR</a>
+  </div>
+</div></header>
+
+<main class="wrap main">
+  <div class="cards">
+    <div class="card" id="c_entradas"><div class="t">ENTRADAS</div>
+      <div class="price" id="r_general"><span>Entrada general</span><span id="entrada_general"></span></div>
+      <div class="price" id="r_menores"><span>Menores</span><span id="menores"></span></div>
+      <div class="price" id="r_parque"><span>Parque Cerrado</span><span id="parque_cerrado"></span></div>
+    </div>
+    <div class="card" id="c_horarios"><div class="t">HORARIOS</div><div class="v"><span id="horarios" class="pre"></span> <a id="link_horarios" href="#" target="_blank" rel="noopener" hidden>Ver cronograma</a></div></div>
+    <div class="card"><div class="t">SEDE</div><div class="v"><span id="sede2"></span><br><span id="ciudad" class="muted"></span></div></div>
+    <div class="card"><div class="t">MÁS INFORMACIÓN</div><div class="v">
+      <a id="link_info" href="https://gp3sports.lat/cav.html">Campeonato Argentino (CAV)</a> ·
+      <a id="link_info_ccv" href="https://gp3sports.lat/ccv.html">Campeonato Chileno (CCV)</a></div></div>
+    <div class="card"><div class="t">CONTACTO</div><div class="v"><span id="contacto"></span><br>
+      <a href="https://wa.me/56952116037" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> ·
+      <a href="https://www.instagram.com/gp3.sports.latam/" target="_blank" rel="noopener">@gp3.sports.latam</a></div></div>
+  </div>
+  <p class="note" id="nota"></p>
+</main>
+</div>
+
+<footer>GP3 Sports · Campeonato Argentino de Velocidad (CAV) y Campeonato Chileno de Velocidad (CCV)</footer>
+
+<script>
+/*
+  FUENTE ÚNICA: planilla "FICHA PRÓXIMA FECHA · GP3" (Drive GP3, carpeta 00. GP3 SPORTS LATAM).
+  El equipo cambia la planilla; esta página se actualiza sola. No hace falta tocar este archivo.
+  RESPALDO: solo se usa si la planilla no responde, y nunca después de RESPALDO.fecha_fin.
+*/
+(function(){
+  var SHEET_ID='1Gk8uIsBgBBzmmVz1bNJM7sXfX_d2BLr3AIAbkPDGrFY';
+  var RESPALDO={
+    nombre:'Chile x Argentina', sede:'Autódromo Internacional Termas de Río Hondo',
+    fechas:'del 9 al 11 de octubre de 2026', fecha_fin:'2026-10-11',
+    campeonatos:'6ª fecha Campeonato Argentino (CAV) · 5ª fecha Campeonato Chileno (CCV)',
+    ciudad:'Termas de Río Hondo, Santiago del Estero, Argentina',
+    entrada_general:'Gratis', menores:'Hasta 12 años: sin cargo',
+    parque_cerrado:'$20.000 ARS (incluye estacionamiento)',
+    link_entradas:'https://app.tickit.global/web/event/chile-x-argentina-termas-de-rio-hondo-2026-2026-10-09',
+    boton_entradas:'Entradas · Parque Cerrado',
+    horarios:'Publicaremos los horarios apenas estén confirmados',
+    link_info:'https://gp3sports.lat/cav.html', link_info_ccv:'https://gp3sports.lat/ccv.html',
+    contacto:'WhatsApp +56 9 5211 6037 · inscripcion@gp3chile.cl', estado:'próxima'
+  };
+  // Solo se aceptan links a estos dominios (evita que un cambio en la planilla mande a una página falsa)
+  var DOMINIOS=['app.tickit.global','gp3sports.lat','www.gp3sports.lat','panel.gp3sports.lat','gp3chile.cl',
+    'www.google.com','maps.google.com','maps.app.goo.gl','goo.gl','drive.google.com','docs.google.com','www.instagram.com','instagram.com'];
+  function $(id){return document.getElementById(id)}
+  function okUrl(u){var m=/^https:\/\/([^\/\s"'<>]+)(\/[^\s"'<>]*)?$/.exec(u||'');return !!m && DOMINIOS.indexOf(m[1].toLowerCase())>=0}
+  function parseCSV(t){var rows=[],row=[],f='',q=false;t=t.replace(/^﻿/,'');for(var i=0;i<t.length;i++){var c=t[i];
+    if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+    else if(c=='"')q=true;else if(c==','){row.push(f);f=''}else if(c=='\n'){row.push(f);rows.push(row);row=[];f=''}else if(c!='\r')f+=c}
+    if(f!==''||row.length){row.push(f);rows.push(row)}return rows}
+  function fecha(s){ // acepta 2026-10-11, 11/10/2026, 11-10-2026
+    s=String(s||'').replace(/^'/,'').trim();var m;
+    if(m=/^(\d{4})-(\d{1,2})-(\d{1,2})/.exec(s))return new Date(+m[1],m[2]-1,+m[3],23,59,59);
+    if(m=/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})/.exec(s))return new Date(+m[3],m[2]-1,+m[1],23,59,59);
+    return null}
+  function set(id,v,fallback){var e=$(id);if(e)e.textContent=(v&&v.trim())?v:(fallback===undefined?'Por confirmar':fallback)}
+
+  function pintar(d, origen){
+    var hoy=new Date(), fin=fecha(d.fecha_fin), est=(d.estado||'').toLowerCase();
+    if(fin && hoy>fin && est.indexOf('final')<0) est='finalizada';
+    set('nombre',d.nombre,'Próxima fecha');
+    set('sede',d.sede,''); set('sede2',d.sede); set('ciudad',d.ciudad,'');
+    set('fechas',d.fechas); set('campeonatos',d.campeonatos,'CAV · CCV');
+    set('entrada_general',d.entrada_general); set('menores',d.menores); set('parque_cerrado',d.parque_cerrado);
+    set('horarios',d.horarios); set('contacto',d.contacto,'');
+    $('r_menores').hidden=!d.menores; $('r_parque').hidden=!d.parque_cerrado;
+    var cta=$('cta');
+    if(okUrl(d.link_entradas)){cta.href=d.link_entradas;cta.textContent='🎟️ '+(d.boton_entradas||'Entradas').toUpperCase();cta.hidden=false}else cta.hidden=true;
+    var mapa=$('mapa'), q=(d.sede||'')+' '+(d.ciudad||'');
+    if(okUrl(d.link_mapa)){mapa.href=d.link_mapa;mapa.hidden=false}
+    else if(d.sede){mapa.href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q.trim());mapa.hidden=false}
+    var lh=$('link_horarios'); if(okUrl(d.link_horarios)){lh.href=d.link_horarios;lh.hidden=false}
+    if(okUrl(d.link_info))$('link_info').href=d.link_info;
+    if(okUrl(d.link_info_ccv))$('link_info_ccv').href=d.link_info_ccv;
+    document.title=(d.nombre||'Próxima fecha')+' · GP3 Sports';
+    var k=$('k'), nota=[];
+    if(est.indexOf('curso')>=0) k.textContent='EN CURSO AHORA';
+    else if(est.indexOf('suspend')>=0){k.textContent='FECHA SUSPENDIDA';cta.hidden=true}
+    else if(est.indexOf('poster')>=0){k.textContent='FECHA POSTERGADA';cta.hidden=true}
+    else if(est.indexOf('final')>=0){
+      k.textContent='ÚLTIMA FECHA DISPUTADA'; cta.hidden=true; $('c_entradas').hidden=true; $('c_horarios').hidden=true;
+      nota.push('Muy pronto anunciaremos la próxima fecha. Síguenos en @gp3.sports.latam.');
+    }
+    if(d.actualizado) nota.push('Actualizado: '+String(d.actualizado).replace(/^'/,''));
+    $('nota').textContent=nota.join(' · ');
+    $('loading').hidden=true; $('content').hidden=false;
+  }
+  function sinDatos(){
+    $('loading').textContent='Muy pronto publicaremos la próxima fecha. Escríbenos por WhatsApp al +56 9 5211 6037 o síguenos en @gp3.sports.latam.';
+  }
+  function respaldo(){
+    var fin=fecha(RESPALDO.fecha_fin);
+    if(fin && new Date()<=fin) pintar(RESPALDO,'respaldo'); else sinDatos();
+  }
+  var listo=false;
+  var timer=setTimeout(function(){if(!listo){listo=true;respaldo()}},5000);
+  fetch('https://docs.google.com/spreadsheets/d/'+SHEET_ID+'/gviz/tq?tqx=out:csv&nc='+Date.now(),{cache:'no-store'})
+    .then(function(r){if(!r.ok)throw 0;return r.text()})
+    .then(function(t){
+      if(listo)return; var d={};
+      parseCSV(t).forEach(function(r){if(r[0])d[r[0].trim()]=(r[1]||'').trim()});
+      if(!d.nombre)throw 0;
+      listo=true;clearTimeout(timer);pintar(d,'planilla');
+    })
+    .catch(function(){if(!listo){listo=true;clearTimeout(timer);respaldo()}});
+})();
+</script>
+</body>
+</html>
