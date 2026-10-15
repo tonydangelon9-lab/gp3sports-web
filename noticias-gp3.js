@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-10-15", tag:"Instagram", title:"🇨🇱 × 🇦🇷 La gran final. 13, 14 y 15 de noviembre en el Circuito San Juan Villicum: Sú…", text:"🇨🇱 × 🇦🇷 La gran final. 13, 14 y 15 de noviembre en el Circuito San Juan Villicum: Súper Pole el sábado 14 y Carrera el domingo 15. #GP3CAV #GP3CCV #FinalCAV #SanJuanVillicum", imagen:"NOTICIAS-IG/Deg8ZxQDnum.jpg", ig:"Deg8ZxQDnum" },
  { fecha:"2026-10-12", tag:"Instagram", title:"Ranking del Campeonato Argentino de Velocidad tras la 6ª fecha en Termas de Río Hondo. A…", text:"Ranking del Campeonato Argentino de Velocidad tras la 6ª fecha en Termas de Río Hondo. Así quedan los líderes: SBK Experto, Francisco Vélez (110), 8 puntos sobre Felipe Gini; SBK P", imagen:"NOTICIAS-IG/DeZcN61luZD.jpg", ig:"DeZcN61luZD" },
  { fecha:"2026-10-10", tag:"Instagram", title:"🏁 GANADORES DE LA SÚPER POLE | CCV", text:"🏁 GANADORES DE LA SÚPER POLE | CCV 📍 Termas de Río Hondo, Argentina  🏍️ GP3 Experto: #14 Dino Gallo 🏍️ GP3 Promocional: #37 Manuel Barrionuevo 🏍️ SBK Amateur: #11 Alejandro Ve", imagen:"NOTICIAS-IG/DeVBU85FoLK.jpg", ig:"DeVBU85FoLK" },
  { fecha:"2026-10-10", tag:"Instagram", title:"🏁 GANADORES DE LA SÚPER POLE | CAV", text:"🏁 GANADORES DE LA SÚPER POLE | CAV 📍 Termas de Río Hondo, Argentina  🏍️ GP3 Experto: #13 Ariel Gabarini 🏍️ GP3 Amateur: #69 Jose Ignacio Sartor 🏍️ GP3 Promocional: #64 Facundo", imagen:"NOTICIAS-IG/DeVAi7vnP9w.jpg", ig:"DeVAi7vnP9w" },
