@@ -1,38 +1,32 @@
-/* GP3 Sports LATAM — service worker (permite instalar como app + básico offline) */
-const CACHE = 'gp3-v1';
-const CORE = ['/', '/index.html', '/cav.html', '/ccv.html', '/gp3-logo.png', '/icon-192.png', '/icon-512.png', '/manifest.json'];
+/* GP3 Sports LATAM — service worker v2 (09-11-2026)
+ *
+ * Qué cambió y por qué:
+ * La v1 se ponía en medio de CADA visita (escuchaba "fetch"): primero intentaba internet y, si fallaba,
+ * mostraba una copia guardada. No tenía tiempo límite, así que con señal débil la página quedaba
+ * "conectando" hasta que el navegador se rendía. Además, al instalarse descargaba en segundo plano
+ * cav.html (~950 KB) y otros archivos, compitiendo con la propia carga de la portada.
+ *
+ * La v2 ya NO escucha "fetch": el navegador va directo a internet, como cualquier página normal.
+ * Se mantiene registrado porque index.html lo sigue registrando y así se puede actualizar en el futuro;
+ * la instalación como app depende de manifest.json, no de este archivo.
+ * Al activarse borra todas las cachés del sitio (hoy solo existe "gp3-v1": copias de páginas e imágenes
+ * públicas; no hay datos de nadie). Ya no hay modo sin conexión: sin señal se ve el aviso normal del navegador.
+ */
 
-self.addEventListener('install', function (e) {
-  e.waitUntil(
-    caches.open(CACHE).then(function (c) {
-      return c.addAll(CORE.map(function (u) { return new Request(u, { cache: 'reload' }); })).catch(function () {});
-    })
-  );
+self.addEventListener('install', function () {
+  // Reemplaza a la v1 apenas se descarga, sin esperar a que se cierren las pestañas abiertas.
   self.skipWaiting();
 });
 
 self.addEventListener('activate', function (e) {
   e.waitUntil(
-    caches.keys().then(function (ks) {
-      return Promise.all(ks.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
-    })
+    caches.keys()
+      .then(function (ks) {
+        return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+      })
+      .catch(function () {})
+      .then(function () { return self.clients.claim(); })
   );
-  self.clients.claim();
 });
 
-self.addEventListener('fetch', function (e) {
-  var req = e.request;
-  if (req.method !== 'GET') return;
-  var url;
-  try { url = new URL(req.url); } catch (err) { return; }
-  if (url.origin !== self.location.origin) return; // no tocar terceros (fuentes, pixel, imágenes externas)
-  e.respondWith(
-    fetch(req).then(function (res) {
-      var copy = res.clone();
-      caches.open(CACHE).then(function (c) { c.put(req, copy); }).catch(function () {});
-      return res;
-    }).catch(function () {
-      return caches.match(req).then(function (r) { return r || caches.match('/'); });
-    })
-  );
-});
+// Sin listener "fetch" a propósito (ver arriba).
