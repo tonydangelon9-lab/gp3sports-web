@@ -265,8 +265,8 @@ src="https://www.facebook.com/tr?id=785514300908437&ev=PageView&noscript=1"/></n
     <div class="fact">SBK · GP3</div>
   </div>
   <div class="next">
-    <div class="nk">Gran Final</div>
-    <div class="nv">San Juan Villicum</div>
+    <div class="nk">Temporada 2026 finalizada</div>
+    <div class="nv">Gran Final San Juan Villicum</div>
     <div class="nd">Fecha 6 · 13 al 15 de Noviembre 2026</div>
   </div>
 </div></header>
@@ -407,10 +407,10 @@ var CATS={
 
 var NEWS=[
  {tag:"Campeones 2026",title:"Ya están los campeones del CCV 2026",text:"La Gran Final de San Juan Villicum cerró el Campeonato Chileno de Velocidad 2026 con estos campeones: Dino Gallo (GP3 Experto), Marco Cea (GP3 Amateur), Valentina González (GP3 Promocional), Vicente Kruger (SBK Pro), Guillermo Chamorro (SBK Experto), Pablo Gamberini (SBK Senior), Alejandro Vega (SBK Amateur) y Erick Mejías (SBK Promocional). Resultados sujetos a la verificación técnica de CAMOD."},
- {tag:"GP3 Promocional",title:"Valentina González, nueva líder de GP3 Promocional",text:"En la Fecha 5 en Termas de Río Hondo, Valentina González (#31) fue segunda en la Súper Pole y en la carrera de la clase CCV, detrás de Manuel Barrionuevo (#37), que ganó las dos y suma 22 puntos. Con 67 puntos, Valentina pasa al primer lugar, cuatro más que Gaspar González. Dino Gallo (#14) fue el mejor de la clase CCV de GP3 Experto en la Súper Pole y en la carrera, y llega a 76; Alejandro Vega (#11) hizo lo mismo en SBK Amateur y suma 78."},
- {tag:"GP3 Amateur",title:"Cea sigue al frente tras San Juan",text:"Marco Cea (#7) conserva el liderazgo de GP3 Amateur con 62 puntos; Danko Aguilera ganó la carrera en San Juan Villicum y es su escolta."},
- {tag:"SBK Pro",title:"Kruger ganó en San Juan y estira la ventaja",text:"Vicente Kruger (#47) se impuso en la Súper Pole y en la carrera de San Juan Villicum y lidera SBK Pro con 67 puntos sobre Maximiliano Fontecilla."},
- {tag:"Binacional",title:"El campeonato se define entre dos países",text:"El ranking binacional combina los puntos de Chile y Argentina: cada fecha vale doble para la definición."},
+ {tag:"GP3 Promocional",title:"Fecha 5: Valentina González pasó al primer lugar de GP3 Promocional",text:"En la Fecha 5 en Termas de Río Hondo, Valentina González (#31) fue segunda en la Súper Pole y en la carrera de la clase CCV, detrás de Manuel Barrionuevo (#37), que ganó las dos y sumó 22 puntos. Con 67 puntos, Valentina pasó al primer lugar, cuatro más que Gaspar González. Dino Gallo (#14) fue el mejor de la clase CCV de GP3 Experto en la Súper Pole y en la carrera, y llegó a 76; Alejandro Vega (#11) hizo lo mismo en SBK Amateur y sumó 78."},
+ {tag:"GP3 Amateur",title:"Fecha 4: Cea siguió al frente tras San Juan",text:"En la Fecha 4 (septiembre), Marco Cea (#7) conservó el liderazgo de GP3 Amateur con 62 puntos; Danko Aguilera ganó la carrera en San Juan Villicum y quedó como su escolta."},
+ {tag:"SBK Pro",title:"Fecha 4: Kruger ganó en San Juan y estiró la ventaja",text:"En la Fecha 4 (septiembre), Vicente Kruger (#47) se impuso en la Súper Pole y en la carrera de San Juan Villicum y amplió su liderazgo en SBK Pro con 67 puntos sobre Maximiliano Fontecilla."},
+ {tag:"Binacional",title:"Un campeonato entre dos países",text:"El ranking binacional suma los puntos de las fechas corridas en Chile y en Argentina."},
  {tag:"Calendario",title:"San Juan Villicum, la Gran Final",text:"La Fecha 6, final de la temporada, se corrió del 13 al 15 de noviembre en el Autódromo San Juan Villicum, Argentina."}
 ];
 
@@ -444,7 +444,7 @@ window.avImgErr=function(img,num){var n=+(img.dataset.r||0);if(n<3){img.dataset.
   function catBlock(cat){
     var arr=CATS[cat];var wrap=el("div","catblock");
     wrap.appendChild(el("div","catname",cat));
-    wrap.appendChild(el("div","catmeta",arr.length+" pilotos · líder "+arr[0].name+" ("+arr[0].pts+" pts)"));
+    wrap.appendChild(el("div","catmeta",arr.length+(arr.length===1?" piloto":" pilotos")+" · primer lugar: "+arr[0].name+" ("+arr[0].pts+" pts)"));
     var g=el("div","grid");
     arr.forEach(function(p){
       var lead=p.pos===1?'<span class="lead">🏆</span>':"";
