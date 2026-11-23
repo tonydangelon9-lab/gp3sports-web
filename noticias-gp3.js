@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-11-23", tag:"Instagram", title:"Bajo el arco y rumbo a la pista. 🏁", text:"Bajo el arco y rumbo a la pista. 🏁  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgGgp0KBGTW.jpg", ig:"DgGgp0KBGTW" },
  { fecha:"2026-11-22", tag:"Instagram", title:"Pocas pistas tienen un paisaje así. El Autódromo San Juan Villicum. ⛰️", text:"Pocas pistas tienen un paisaje así. El Autódromo San Juan Villicum. ⛰️  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgD728UNDnj.jpg", ig:"DgD728UNDnj" },
  { fecha:"2026-11-21", tag:"Instagram", title:"Así se vive el cierre de una temporada. Esto es lo que nos mueve. 🔥", text:"Así se vive el cierre de una temporada. Esto es lo que nos mueve. 🔥  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgBXEKynZkC.jpg", ig:"DgBXEKynZkC" },
  { fecha:"2026-11-21", tag:"Instagram", title:"¡Feliz cumpleaños, Alejandro Vega! 🎂🏁 Hoy celebramos al piloto número 11 de SBK Amateu…", text:"¡Feliz cumpleaños, Alejandro Vega! 🎂🏁 Hoy celebramos al piloto número 11 de SBK Amateur. Toda la familia del Campeonato Chileno de Velocidad te desea un gran día y muchas vueltas", imagen:"NOTICIAS-IG/DgAL5IlCjup.jpg", ig:"DgAL5IlCjup" },
