@@ -11,6 +11,7 @@
    La más nueva va primero. No borrar entradas manualmente salvo error.
    ============================================================ */
 window.GP3NEWS = [
+ { fecha:"2026-11-25", tag:"Instagram", title:"Motos y público, de cerca, en la calle de boxes del Autódromo San Juan Villicum.", text:"Motos y público, de cerca, en la calle de boxes del Autódromo San Juan Villicum.  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgLqP0LoPOy.jpg", ig:"DgLqP0LoPOy" },
  { fecha:"2026-11-24", tag:"Instagram", title:"Tribunas, pista y motos. Villicum en estado puro.", text:"Tribunas, pista y motos. Villicum en estado puro.  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgJFct2pTjl.jpg", ig:"DgJFct2pTjl" },
  { fecha:"2026-11-24", tag:"Instagram", title:"¡Feliz cumpleaños, Vicente Kruger! 🎂🏁 Hoy celebramos al piloto número 47 de SBK Pro. T…", text:"¡Feliz cumpleaños, Vicente Kruger! 🎂🏁 Hoy celebramos al piloto número 47 de SBK Pro. Toda la familia del Campeonato Chileno de Velocidad te desea un gran día y muchas vueltas más", imagen:"NOTICIAS-IG/DgH6SALI7wN.jpg", ig:"DgH6SALI7wN" },
  { fecha:"2026-11-23", tag:"Instagram", title:"Bajo el arco y rumbo a la pista. 🏁", text:"Bajo el arco y rumbo a la pista. 🏁  #CAV #CCV #GP3Sports #Villicum #SanJuan #Motociclismo", imagen:"NOTICIAS-IG/DgGgp0KBGTW.jpg", ig:"DgGgp0KBGTW" },
